@@ -1,0 +1,386 @@
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<id value="bundle">
+</id>
+	<meta>
+		<lastUpdated value="2021-01-18T13:30:00Z"/>
+		<source value="20250606_120019206.MLLP.in1"/>
+		<tag>
+			<display value="HIE_bamboohealth_ADT_20250606120104791_5aaba9d0-6959-11ea-ab12-0800200c9a66_fhir_bundle.xml"/>
+		</tag>
+	</meta>
+	<type value="transaction"/>
+	<entry>
+		<resource>
+			<MessageHeader>
+				<id value="PATIENTPING-ADT-5aaba9d0-6959-11ea-ab12-0800200c9a66"/>
+				<meta>
+					<lastUpdated value="2021-01-18T13:30:00Z"/>
+				</meta>
+				<eventCoding id="ADT A04"/>
+				<destination>
+					<receiver>
+						<display value="RECEIVING_APP Davita"/>
+					</receiver>
+				</destination>
+				<sender>
+					<display value="Community Medical Center - Valley 91910"/>
+				</sender>
+				<source>
+					<name value="Community Medical Center - Valley 91910"/>
+				</source>
+			</MessageHeader>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Location>
+				<id value="PATIENTPING-ADT-5aaba9d0-6959-11ea-ab12-0800200c9a66"/>
+				<meta>
+					<lastUpdated value="2021-01-18T13:30:00Z"/>
+				</meta>
+				<identifier>
+					<type>
+						<text value="2.16.840.1.113883.9.100"/>
+					</type>
+					<system value="LabResults"/>
+					<value value="US_LAB_IGs"/>
+				</identifier>
+				<name value="0302"/>
+				<type>
+					<text value="0302"/>
+				</type>
+			</Location>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Encounter>
+				<id value="PATIENTPING-ADT-5aaba9d0-6959-11ea-ab12-0800200c9a66"/>
+				<meta>
+					<lastUpdated value="2021-01-18T13:30:00Z"/>
+				</meta>
+				<status/>
+				<class>
+					<code value="E"/>
+					<display value="E"/>
+				</class>
+				<serviceType>
+					<coding>
+						<code value="VASCULAR SUR^PV1-10-2"/>
+						<display value="VASCULAR SUR^PV1-10-2"/>
+					</coding>
+				</serviceType>
+				<subject>
+					<reference value="Patient/H123581444"/>
+				</subject>
+				<participant>
+					<individual>
+						<reference value="Practitioner/999999999"/>
+					</individual>
+				</participant>
+				<participant>
+					<individual>
+						<reference value="Practitioner/4020"/>
+					</individual>
+				</participant>
+				<participant>
+					<individual>
+						<reference value="Practitioner/Shevin"/>
+					</individual>
+				</participant>
+				<participant>
+					<individual>
+						<reference value="Practitioner/902"/>
+					</individual>
+				</participant>
+				<period>
+					<start value="2021-01-18T13:30:00Z"/>
+					<end value="2021-01-18T14:41:23Z"/>
+				</period>
+				<reasonCode>
+					<coding>
+						<system value="MRC"/>
+						<code value="033"/>
+						<display value="BLEEDING"/>
+					</coding>
+				</reasonCode>
+				<hospitalization>
+					<admitSource>
+						<text value="HMO referral"/>
+					</admitSource>
+					<destination>
+						<display value="Outpatient Services"/>
+					</destination>
+					<dischargeDisposition>
+						<coding>
+							<code value="Left against medical advice or discontinued care^Home"/>
+							<display value="Left against medical advice or discontinued care^Home"/>
+						</coding>
+					</dischargeDisposition>
+				</hospitalization>
+			</Encounter>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Condition>
+				<id value="1"/>
+				<meta>
+					<lastUpdated value="2021-01-18T13:30:00Z"/>
+				</meta>
+				<code>
+					<coding>
+						<system value="I10"/>
+						<code value="R07.9"/>
+						<display value="Chest pain, unspecified"/>
+					</coding>
+					<coding>
+						<system value="I10A"/>
+						<code value="R519"/>
+						<display value="Headache, unspecified"/>
+					</coding>
+					<text value="Chest pain, unspecified"/>
+				</code>
+				<subject>
+					<reference value="Patient/H123581444"/>
+				</subject>
+				<encounter>
+					<reference value="Encounter/V31415926535"/>
+				</encounter>
+				<recordedDate value="2022-02-02T12:12:44Z"/>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Condition>
+				<id value="2"/>
+				<meta>
+					<lastUpdated value="2021-01-18T13:30:00Z"/>
+				</meta>
+				<code>
+					<coding>
+						<system value="I10"/>
+						<code value="N1330"/>
+						<display value="Unspecified hydronephrosis"/>
+					</coding>
+					<coding>
+						<system value="I10B"/>
+						<code value="R519"/>
+						<display value="Headache, unspecified"/>
+					</coding>
+					<text value="Unspecified hydronephrosis"/>
+				</code>
+				<subject>
+					<reference value="Patient/H123581444"/>
+				</subject>
+				<encounter>
+					<reference value="Encounter/V31415926535"/>
+				</encounter>
+				<recordedDate value="2022-02-03T12:12:21Z"/>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Patient>
+				<id value="H123581444"/>
+				<meta>
+					<lastUpdated value="2021-01-18T13:30:00Z"/>
+				</meta>
+				<extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race">
+					<extension url="text"/>
+					<valueString value="2028-9"/>
+				</extension>
+				<extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity">
+					<extension url="text"/>
+					<valueString value="Asian"/>
+				</extension>
+				<identifier>
+					<use value="usual"/>
+					<type>
+						<coding>
+							<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+							<code value="SS"/>
+							<display value="Social Security Number" />
+					</coding>
+				</type>
+				<system value="http://hl7.org/fhir/sid/us-ssn"/>
+				<value value="987-567-3345"/>
+			</identifier>
+			<identifier>
+				<type>
+					<text value="auth"/>
+				</type>
+				<system value="auth"/>
+				<value value="H123581444"/>
+			</identifier>
+			<identifier>
+				<type>
+					<text value="CEA"/>
+				</type>
+				<system value="CE"/>
+				<value value="90206"/>
+			</identifier>
+			<name>
+				<family value="CHEESE"/>
+				<given value="LIMBURGER Nancy_Mid"/>
+				<prefix value="Mr."/>
+				<suffix value="DDS"/>
+			</name>
+			<gender value="male"/>
+			<birthDate value="1942-08-09"/>
+			<deceasedDateTime value="2022-01-18T14:30:00Z"/>
+			<address>
+				<line value="01 CHEESEMONGER WAY"/>
+				<city value="BOSTON"/>
+				<state value="MA"/>
+				<postalCode value="02101"/>
+				<country value="usa"/>
+			</address>
+			<maritalStatus>
+				<text value="Married"/>
+			</maritalStatus>
+			<contact>
+				<telecom>
+					<system value="phone"/>
+					<value value="78155555555"/>
+					<use value="home"/>
+				</telecom>
+				<telecom>
+					<system value="phone"/>
+					<value value="765-675-3987"/>
+					<use value="work"/>
+				</telecom>
+			</contact>
+			<communication>
+				<language>
+					<text value="EN"/>
+				</language>
+				<preferred value="true"/>
+			</communication>
+			<generalPractitioner>
+				<reference value="Practitioner/999999999"/>
+			</generalPractitioner>
+			<generalPractitioner>
+				<reference value="Practitioner/4020"/>
+			</generalPractitioner>
+			<generalPractitioner>
+				<reference value="Practitioner/Shevin"/>
+			</generalPractitioner>
+			<generalPractitioner>
+				<reference value="Practitioner/902"/>
+			</generalPractitioner>
+		</Patient>
+	</resource>
+</entry>
+<entry>
+	<resource>
+		<Practitioner>
+			<id value="999999999"/>
+			<meta>
+				<lastUpdated value="2021-01-18T13:30:00Z"/>
+			</meta>
+			<name>
+				<use value="usual"/>
+				<family value="Palm"/>
+				<given value="Michael M"/>
+				<prefix value="Mr."/>
+				<suffix value="OBE"/>
+			</name>
+		</Practitioner>
+	</resource>
+</entry>
+<entry>
+	<resource>
+		<Practitioner>
+			<id value="4020"/>
+			<meta>
+				<lastUpdated value="2021-01-18T13:30:00Z"/>
+			</meta>
+			<name>
+				<family value="Hook"/>
+				<given value="Estergie B"/>
+			</name>
+		</Practitioner>
+	</resource>
+</entry>
+<entry>
+	<resource>
+		<Practitioner>
+			<id value="Shevin"/>
+			<meta>
+				<lastUpdated value="2021-01-18T13:30:00Z"/>
+			</meta>
+			<name>
+				<family value="Sheikhmous"/>
+				<given value="Abdul MSD"/>
+			</name>
+		</Practitioner>
+	</resource>
+</entry>
+<entry>
+	<resource>
+		<Practitioner>
+			<id value="902"/>
+			<meta>
+				<lastUpdated value="2021-01-18T13:30:00Z"/>
+			</meta>
+			<name>
+				<family value="Jenny"/>
+				<given value="B Henderson"/>
+			</name>
+		</Practitioner>
+	</resource>
+</entry>
+<entry>
+	<resource>
+		<Provenance>
+			<id value="PATIENTPING-ADT-5aaba9d0-6959-11ea-ab12-0800200c9a66"/>
+			<meta>
+				<lastUpdated value="2021-01-18T13:30:00Z"/>
+			</meta>
+			<target>
+				<reference value="MessageHeader/PATIENTPING-ADT-5aaba9d0-6959-11ea-ab12-0800200c9a66"/>
+			</target>
+			<target>
+				<reference value="Patient/H123581444"/>
+			</target>
+			<target>
+				<reference value="Location/PATIENTPING-ADT-5aaba9d0-6959-11ea-ab12-0800200c9a66"/>
+			</target>
+			<target>
+				<reference value="Encounter/PATIENTPING-ADT-5aaba9d0-6959-11ea-ab12-0800200c9a66"/>
+			</target>
+			<target>
+				<reference value="Condition/1"/>
+			</target>
+			<target>
+				<reference value="Condition/2"/>
+			</target>
+			<target>
+				<reference value="Practitioner/999999999"/>
+			</target>
+			<target>
+				<reference value="Practitioner/4020"/>
+			</target>
+			<target>
+				<reference value="Practitioner/Shevin"/>
+			</target>
+			<target>
+				<reference value="Practitioner/902"/>
+			</target>
+			<recorded value="2021-01-18T13:30:00Z"/>
+			<location>
+				<display value="HCD"/>
+			</location>
+			<activity>
+				<text value="CREATE_PRESENTED"/>
+			</activity>
+			<agent>
+				<who/>
+			</agent>
+		</Provenance>
+	</resource>
+</entry>
+</Bundle>

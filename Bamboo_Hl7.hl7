@@ -1,0 +1,63 @@
+MSH|^~\&|PATIENTPING-ADT|91910^Community Medical Center - Valley^HOS|RECEIVING-APP|91760^Community Medical Center|20220307134714||ADT^A04|5eeba9d0-6959-11ea-ab12-0800200c9a66|P|2.5
+EVN|A04|20210118133000||CREATE_PRESENTED
+PID|1|^^^PP^PP|H123581321^^^auth^auth||CHEESE^LIMBURGER^||19420809|M|||01 CHEESEMONGER WAY^^BOSTON^MA^02101||78155555555|||||A31415926535|0000
+PD1||||999999999^Palm^Michael^^^^
+PV1|1|E|||||||||||||||||V31415926535|||||||||||||||||||||||||20210118133000||||||87654321
+IN1|1|||Strictly Commercial|||||||||||Commercial|||||||||||||||||||||01123481321
+ZMD|521316d0-6959-11ea-ab12-0800200c9a66
+ZPP|PROGRAMS
+ZPP|--------
+ZPP|1. Test Health
+ZPP|2. COMMERCIAL SOUTH
+ZPP|3. 2 MODERATE RISK
+ZPP|4. Vertical Commercial
+ZPP|
+ZPP|
+ZPP|PRACTICES
+ZPP|--------
+ZPP|1. The Family Medicine Institute
+ZPP|
+ZPP|
+ZPP|CARE COORDINATORS
+ZPP|-----------------
+ZPP|Name		: Perry Giordano
+ZPP|Phone		: 555-555-5555
+ZPP|Email		: perry.giordano@ao.org
+ZPP|Fax			: 5555555555
+ZPP|-------------------------------------
+ZPP|Name		: Dave Klein
+ZPP|Phone		: 555-555-5555
+ZPP|Email		: david.klein@ao.org
+ZPP|Fax			: 5555555555
+ZPP|-------------------------------------
+ZPP|Name		: Perry Giordano
+ZPP|Phone		: 555-555-5555
+ZPP|Email		: perry.giordano@ao.org
+ZPP|Fax			: 5555555555
+ZPP|-------------------------------------
+ZPP|
+ZPP|
+ZPP|ADMIT CARE INSTRUCTIONS
+ZPP|-----------------------
+ZPP|1. Contact Population Health to review the patient's discharge plan.
+ZPP|2. Contact Population Health to review any Barriers or Concerns related to the discharge plan.
+ZPP|
+ZPP|
+ZPP|DISCHARGE CARE INSTRUCTIONS
+ZPP|---------------------------
+ZPP|1. Contact Population Health to review the patient's discharge plan.
+ZPP|2. This is a Test ACO patient, please forward discharge summary and medication list.
+ZPP|3. Contact Population Health to review any Barriers or Concerns related to the discharge plan.
+ZPP|
+ZPP|
+ZPP|OTHER CARE PROVIDERS
+ZPP|--------------------
+ZPP|Name		: Michael Palm
+ZPP|Phone		: 555-555-5555
+ZPP|Email		: 
+ZPP|Fax			: 
+ZPP|Cohort Name	: The Family Medicine Institute
+ZPP|-------------------------------------
+ZPP|
+ZPP|
+ZFA|91910|Community Medical Center - Valley|HOS|^^^MA^|1649209230
