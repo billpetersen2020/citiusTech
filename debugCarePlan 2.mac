@@ -1,0 +1,17 @@
+DebugProcess
+
+ //w ##class(HS.Gateway.ECR.PatientDelete).SDADelete("MVP^MVP^83755800")
+ //w ##class(HS.Gateway.ECR.PatientDelete).SDADelete("MVP^MVP^63093000")
+
+ set tRequest=##class(MVP.EG.Load.Request).%New()
+ 
+ set tRequest.ControlID = "27458"
+ set tRequest.DistinctValueFields = "MEME_CK,CarePlan_UID"
+ set tRequest.DistinctValues = "63093000,684888"    // MPIID: 100033934
+ //set tRequest.DistinctValues = "83755800,705315"  // MPIID: 100033933
+  
+ set tProcess=##class(Ens.Host).GetShadowInstance("CareRadius.CarePlan.Operation")
+ do tProcess.OnInit()
+ set tSC = tProcess.LoadRequest(tRequest,.tResponse) 
+
+quit

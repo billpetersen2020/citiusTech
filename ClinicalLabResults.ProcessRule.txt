@@ -1,0 +1,65 @@
+/// 
+Class MVP.EG.Facets.ClinicalLabResults.ProcessRule Extends Ens.Rule.Definition
+{
+
+Parameter RuleAssistClass = "EnsLib.MsgRouter.RuleAssist";
+
+XData RuleDefinition [ XMLNamespace = "http://www.intersystems.com/rule" ]
+{
+<ruleDefinition alias="" context="EnsLib.MsgRouter.RoutingEngine" production="EGCLAIMSPKG.EdgeGatewayProduction">
+<ruleSet name="" effectiveBegin="" effectiveEnd="">
+<rule name="">
+<constraint name="msgClass" value="MVP.EG.Load.Request"></constraint>
+<when condition="(SubString(Piece(Document.DistinctValues,&quot;,&quot;,1,1),Length(Piece(Document.DistinctValues,&quot;,&quot;,1,1))-2,Length(Piece(Document.DistinctValues,&quot;,&quot;,1,1))-2)=0)">
+<send transform="" target="Facets.ClinicalLabResults.Process0"></send>
+<return></return>
+</when>
+<when condition="(SubString(Piece(Document.DistinctValues,&quot;,&quot;,1,1),Length(Piece(Document.DistinctValues,&quot;,&quot;,1,1))-2,Length(Piece(Document.DistinctValues,&quot;,&quot;,1,1))-2)=1)">
+<send transform="" target="Facets.ClinicalLabResults.Process1"></send>
+<return></return>
+</when>
+<when condition="(SubString(Piece(Document.DistinctValues,&quot;,&quot;,1,1),Length(Piece(Document.DistinctValues,&quot;,&quot;,1,1))-2,Length(Piece(Document.DistinctValues,&quot;,&quot;,1,1))-2)=2)">
+<send transform="" target="Facets.ClinicalLabResults.Process2"></send>
+<return></return>
+</when>
+<when condition="(SubString(Piece(Document.DistinctValues,&quot;,&quot;,1,1),Length(Piece(Document.DistinctValues,&quot;,&quot;,1,1))-2,Length(Piece(Document.DistinctValues,&quot;,&quot;,1,1))-2)=3)">
+<send transform="" target="Facets.ClinicalLabResults.Process3"></send>
+<return></return>
+</when>
+<when condition="(SubString(Piece(Document.DistinctValues,&quot;,&quot;,1,1),Length(Piece(Document.DistinctValues,&quot;,&quot;,1,1))-2,Length(Piece(Document.DistinctValues,&quot;,&quot;,1,1))-2)=4)">
+<send transform="" target="Facets.ClinicalLabResults.Process4"></send>
+<return></return>
+</when>
+<when condition="(SubString(Piece(Document.DistinctValues,&quot;,&quot;,1,1),Length(Piece(Document.DistinctValues,&quot;,&quot;,1,1))-2,Length(Piece(Document.DistinctValues,&quot;,&quot;,1,1))-2)=5)">
+<send transform="" target="Facets.ClinicalLabResults.Process5"></send>
+<return></return>
+</when>
+<when condition="(SubString(Piece(Document.DistinctValues,&quot;,&quot;,1,1),Length(Piece(Document.DistinctValues,&quot;,&quot;,1,1))-2,Length(Piece(Document.DistinctValues,&quot;,&quot;,1,1))-2)=6)">
+<send transform="" target="Facets.ClinicalLabResults.Process6"></send>
+<return></return>
+</when>
+<when condition="(SubString(Piece(Document.DistinctValues,&quot;,&quot;,1,1),Length(Piece(Document.DistinctValues,&quot;,&quot;,1,1))-2,Length(Piece(Document.DistinctValues,&quot;,&quot;,1,1))-2)=7)">
+<send transform="" target="Facets.ClinicalLabResults.Process7"></send>
+<return></return>
+</when>
+<when condition="(SubString(Piece(Document.DistinctValues,&quot;,&quot;,1,1),Length(Piece(Document.DistinctValues,&quot;,&quot;,1,1))-2,Length(Piece(Document.DistinctValues,&quot;,&quot;,1,1))-2)=8)">
+<send transform="" target="Facets.ClinicalLabResults.Process8"></send>
+<return></return>
+</when>
+<when condition="(SubString(Piece(Document.DistinctValues,&quot;,&quot;,1,1),Length(Piece(Document.DistinctValues,&quot;,&quot;,1,1))-2,Length(Piece(Document.DistinctValues,&quot;,&quot;,1,1))-2)=9)">
+<send transform="" target="Facets.ClinicalLabResults.Process9"></send>
+<return></return>
+</when>
+<otherwise>
+<send transform="" target="Facets.ClinicalLabResults.Process9"></send>
+<return></return>
+</otherwise>
+</rule>
+</ruleSet>
+</ruleDefinition>
+}
+
+/// Revision number of this class
+Parameter SrcVer = 10;
+
+}

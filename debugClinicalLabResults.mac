@@ -1,0 +1,97 @@
+DebugProcess
+
+ //w ##class(HS.Gateway.ECR.PatientDelete).SDADelete("MVP^MVP^74231251")
+ //w ##class(HS.Gateway.ECR.PatientDelete).SDADelete("MVP^MVP^59557200")
+ //w ##class(HS.Gateway.ECR.PatientDelete).SDADelete("MVP^MVP^70938050")
+ w ##class(HS.Gateway.ECR.PatientDelete).SDADelete("MVP^MVP^90923351")
+  
+ set tRequest=##class(MVP.EG.Load.Request).%New()
+ 
+ write !, "(1) "
+ set tRequest.ControlID = "17161"
+ set tRequest.DistinctValueFields = "MEME_CK,LAB_TEST_PANEL_CODE"
+ set tRequest.DistinctValues = "90923351,"  
+
+ set tProcess=##class(Ens.Host).GetShadowInstance("Facets.ClinicalLabResults.Operation")
+ do tProcess.OnInit()
+ set tSC = tProcess.LoadRequest(tRequest,.tResponse) 
+ 
+ /*
+ write !, "(2) "
+ set tRequest.ControlID = "16611"
+ set tRequest.DistinctValueFields = "MEME_CK,LAB_TEST_PANEL_CODE"
+ set tRequest.DistinctValues = "70938050,"  
+
+ set tProcess=##class(Ens.Host).GetShadowInstance("Facets.ClinicalLabResults.Operation")
+ do tProcess.OnInit()
+ set tSC = tProcess.OnRequest(tRequest,.tResponse) 
+ 
+ write !, "(3) "
+ set tRequest.ControlID = "16595"
+ set tRequest.DistinctValueFields = "MEME_CK,LAB_TEST_PANEL_CODE"
+ set tRequest.DistinctValues = "74231251,"  
+
+ set tProcess=##class(Ens.Host).GetShadowInstance("Facets.ClinicalLabResults.Operation")
+ do tProcess.OnInit()
+ set tSC = tProcess.OnRequest(tRequest,.tResponse)
+ 
+ write !, "(4) "
+ set tRequest.ControlID = "17949"
+ set tRequest.DistinctValueFields = "MEME_CK,LAB_TEST_PANEL_CODE"
+ set tRequest.DistinctValues = "59557200,5000005"   
+
+ set tProcess=##class(Ens.Host).GetShadowInstance("Facets.ClinicalLabResults.Operation")
+ do tProcess.OnInit()
+ set tSC = tProcess.OnRequest(tRequest,.tResponse)
+ */
+
+ /*
+ DATA SAMPLES LOADED INTO STAGE:
+ ---------------------------------------
+ set tRequest=##class(MVP.EG.Load.Request).%New()
+ set tRequest.ControlID = "4026"
+ set tRequest.DistinctValueFields = "MEME_CK,LAB_TEST_PANEL_CODE"
+ set tRequest.DistinctValues = "70453000,"  
+
+ set tRequest=##class(MVP.EG.Load.Request).%New()
+ set tRequest.ControlID = "3569"
+ set tRequest.DistinctValueFields = "MEME_CK,LAB_TEST_PANEL_CODE"
+ set tRequest.DistinctValues = "31339552,423935"  
+ */
+ 
+ /*
+ GET DATA SAMPLES FROM STAGE:
+ ---------------------------------------
+ 
+ MEME_CK -- 4647252
+DATE_OF_SERVICE -- 2020-07-29
+LAB_TEST_PANEL_CODE  -- 42110860
+ 
+ 1) GET LIST OF CONTROL ID
+    -> Data Groups getting ready to process: 
+       :ControlID & GroupBy1 Data are parameters you need to query Staging Table
+    --------------
+	SELECT ID as ControlID, CompletedOn, CreatedOn, FailCount, GroupBy1, GroupBy2, GroupBy3, 
+	       GroupBy4, GroupBy5, InterfaceName, Outcome, PercentComplete, RecordCount, StagingTableClass, State, 
+	       SuccessCount, UnprocessedCount
+	FROM MVP_EG_Load.Control
+	WHERE InterfaceName='MVPClinicalLabResults'
+	ORDER BY GroupBy1 ASC
+
+ 2) GET DISTINCT FIELDS
+ 	:DistinctValueFields need to be set as a parameter for DISTINCT FIELD VALUES
+    --------------
+	SELECT ID, Active, AdditionalStagingTables, DeltaTimeStamp, DistinctValueFields, 
+		   GroupBy1, GroupBy2, GroupBy3, GroupBy4, GroupBy5, InterfaceName, StagingTableClass
+	FROM MVP_EG_Load.Configuration
+	WHERE InterfaceName = 'MVPClinicalLabResults'
+ 	
+ 3) Query Staging table for data you want by Date Of Service
+ 	:DATE_OF_SERVICE that is associated to the ControlID 
+ 	:MEME_CK AND LABPANELTESTCODE are parameters you need for DISTINCT VALUES
+    --------------
+	SELECT *
+	FROM MVP_EG_ishs_Staging.USVMVPHEALTHSHARECLINICALLABRESULTS
+	WHERE DATE_OF_SERVICE = '2016-01-26'
+ */ 
+quit

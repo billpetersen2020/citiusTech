@@ -1,0 +1,57 @@
+DebugProcess
+ set tRequest=##class(MVP.EG.Facets.ClinicalLabResults.Message.Request).%New()
+ set tRequest.FACILITY="MVP"
+ set tRequest.ASSIGNINGAUTHORITY="MVP"
+
+ set tRequest.MEMECK="104021000"
+ set tRequest.MEMBERID="80043429700" 
+ set tRequest.DATEOFSERVICE="2018-09-20"
+ set tRequest.LABTESTPANELCODE=""
+ set tRequest.LABPANELCOUNT=2
+ set tRequest.PROCESSING=0
+ set tRequest.SUCCESS=0
+ set tRequest.CREATEDATE="2021-02-08 18:32:05"
+ 
+ set tProcess=##class(Ens.Host).GetShadowInstance("MVP.EG.Facets.ClinicalLabResults.Process")
+ do tProcess.OnInit()
+ set tSC = tProcess.OnRequest(tRequest,.tResponse)
+ 
+  /*
+ set tRequest.MEMECK="104021000"
+ set tRequest.MEMBERID="80043429700" 
+ set tRequest.DATEOFSERVICE="2018-09-22"
+ set tRequest.LABTESTPANELCODE="413338"
+ set tRequest.LABPANELCOUNT=15
+ set tRequest.PROCESSED=0
+ set tRequest.SUCCESS=0
+ set tRequest.CREATEDATE="2021-02-03 13:26:53"
+
+ set tRequest.MEMECK="104021000"
+ set tRequest.MEMBERID="80043429700" 
+ set tRequest.DATEOFSERVICE="2018-09-22"
+ set tRequest.LABTESTPANELCODE="403274"
+ set tRequest.LABPANELCOUNT=1
+ set tRequest.PROCESSED=0
+ set tRequest.SUCCESS=0
+ set tRequest.CREATEDATE="2021-02-03 13:26:53"
+
+ set tRequest.MEMECK="17802"
+ set tRequest.MEMBERID="80010044301" 
+ set tRequest.DATEOFSERVICE="2016-11-01"
+ set tRequest.LABTESTPANELCODE="3958-6"
+ set tRequest.LABPANELCOUNT=2
+ set tRequest.PROCESSED=0
+ set tRequest.SUCCESS=0
+ set tRequest.CREATEDATE="2021-02-03 13:26:53"
+
+ set tRequest.MEMECK="104021000"
+ set tRequest.MEMBERID="80043429700" 
+ set tRequest.DATEOFSERVICE="2018-09-20"
+ set tRequest.LABTESTPANELCODE=""
+ set tRequest.LABPANELCOUNT=2
+ set tRequest.PROCESSED=0
+ set tRequest.SUCCESS=0
+ set tRequest.CREATEDATE="2021-02-03 13:26:53"
+ */
+ 
+quit

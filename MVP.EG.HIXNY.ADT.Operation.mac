@@ -1,0 +1,13 @@
+DebugProcess
+
+ set tRequest=##class(MVP.EG.Load.Request).%New()
+ 
+ set tRequest.ControlID = "9928"
+ set tRequest.DistinctValueFields = "MRN"
+ set tRequest.DistinctValues = "0012612107"  
+
+ set tProcess=##class(Ens.Host).GetShadowInstance("HIXNY.ADT.Operation")
+ do tProcess.OnInit()
+ set tSC = tProcess.LoadRequest(tRequest,.tResponse) 
+
+quit
