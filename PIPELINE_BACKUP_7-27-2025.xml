@@ -1,0 +1,3079 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="IRIS" version="26" zv="IRIS for Windows (x86-64) 2022.1.2 (Build 574_0_23561U)" ts="2025-07-27 08:55:36">
+<Class name="PIPELINE.DTL.FHIR.vR4.Model.Base.BackboneElement">
+<Description>
+Base for elements defined inside a resource.</Description>
+<ProcedureBlock>0</ProcedureBlock>
+<Super>HS.FHIR.DTL.vR4.Model.Base.Element</Super>
+<TimeChanged>67412,67723.5448408</TimeChanged>
+<TimeCreated>67050,61786.528994</TimeCreated>
+
+<Property name="id">
+</Property>
+
+<Property name="extension">
+<Description><![CDATA[
+Extension
+<p>
+Additional content defined by implementations.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Extension</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="extension"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="modifierExtension">
+<Description><![CDATA[
+Extension
+<p>
+Extensions that cannot be ignored even if unrecognized.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Extension</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="modifierExtension"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Parameter name="ELEMENTQUALIFIED">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLNAME">
+<Default>BackboneElement</Default>
+</Parameter>
+
+<Parameter name="XMLPROJECTION">
+<Default>ELEMENT</Default>
+</Parameter>
+
+<Parameter name="XMLSEQUENCE">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLTYPE">
+<Default>BackboneElement</Default>
+</Parameter>
+</Class>
+
+
+<Class name="PIPELINE.DTL.FHIR.vR4.Model.Base.DomainResource">
+<Description>
+A resource with narrative, 
+extensions, 
+and contained resources.</Description>
+<ProcedureBlock>0</ProcedureBlock>
+<Super>HS.FHIR.DTL.vR4.Model.Base.Resource</Super>
+<TimeChanged>67412,67742.9888568</TimeChanged>
+<TimeCreated>67050,61786.5620716</TimeCreated>
+
+<Property name="id">
+</Property>
+
+<Property name="meta">
+<Description><![CDATA[
+Meta
+<p>
+Metadata about the resource.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Meta</Type>
+<Parameter name="XMLNAME" value="meta"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="implicitRules">
+<Description><![CDATA[
+uri
+<p>
+A set of rules under which this content was created.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="implicitRules"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="language">
+<Description><![CDATA[
+code
+<p>
+Language of the resource content.
+<p>
+languages is the PREFERRED FHIR4 ValueSet for codes, 
+but if you need to express meanings not found in languages, 
+you may use codes from any ValueSet.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="language"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="text">
+<Description><![CDATA[
+Narrative
+<p>
+Text summary of the resource, 
+for human interpretation.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Narrative</Type>
+<Parameter name="XMLNAME" value="text"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="contained">
+<Description><![CDATA[
+Resource
+<p>
+Contained, 
+inline Resources.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Resource</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="contained"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="extension">
+<Description><![CDATA[
+Extension
+<p>
+Additional content defined by implementations.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Extension</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="extension"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="modifierExtension">
+<Description><![CDATA[
+Extension
+<p>
+Extensions that cannot be ignored.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Extension</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="modifierExtension"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Parameter name="ELEMENTQUALIFIED">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLNAME">
+<Default>DomainResource</Default>
+</Parameter>
+
+<Parameter name="XMLPROJECTION">
+<Default>ELEMENT</Default>
+</Parameter>
+
+<Parameter name="XMLSEQUENCE">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLTYPE">
+<Default>DomainResource</Default>
+</Parameter>
+</Class>
+
+
+<Class name="PIPELINE.DTL.FHIR.vR4.Model.Base.Element">
+<Description>
+Base for all elements.</Description>
+<ProcedureBlock>0</ProcedureBlock>
+<Super>%Library.RegisteredObject,HS.FHIR.DTL.Util.XML.Adapter,HS.FHIR.DTL.Util.JSON.Adapter,%XML.Adaptor</Super>
+<TimeChanged>67412,67760.3451057</TimeChanged>
+<TimeCreated>67050,61786.6030064</TimeCreated>
+<Inheritance>right</Inheritance>
+
+<Property name="id">
+</Property>
+
+<Property name="extension">
+<Description><![CDATA[
+Extension
+<p>
+Additional content defined by implementations.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Extension</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="extension"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="newResource">
+<Description>
+Generated property, not a FHIR element: Storage space for 'contained' resources that are actually separate from the parent, and need to be serialized as separate objects.</Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Resource</Type>
+<Collection>list</Collection>
+</Property>
+
+<Property name="newResourceReference">
+<Description>
+Generated property, not a FHIR element: Storage space for the location the corresponding newResource entry reference should be stored in after adding it to a repository</Description>
+<Type>%String</Type>
+</Property>
+
+<Property name="primitiveExtension">
+<Description>
+Generated property, not a FHIR element: Storage space for extensions of any elements that have a primitive data type.</Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Extension</Type>
+<Collection>list</Collection>
+</Property>
+
+<Parameter name="ELEMENTQUALIFIED">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLNAME">
+<Default>Element</Default>
+</Parameter>
+
+<Parameter name="XMLPROJECTION">
+<Default>ELEMENT</Default>
+</Parameter>
+
+<Parameter name="XMLSEQUENCE">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLTYPE">
+<Default>Element</Default>
+</Parameter>
+</Class>
+
+
+<Class name="PIPELINE.DTL.FHIR.vR4.Model.Base.Extension">
+<Description>
+Optional Extensions Element.</Description>
+<ProcedureBlock>0</ProcedureBlock>
+<Super>HS.FHIR.DTL.vR4.Model.Base.Element</Super>
+<TimeChanged>67412,67774.4054776</TimeChanged>
+<TimeCreated>67050,61786.5732781</TimeCreated>
+
+<Property name="url">
+<Required>1</Required>
+</Property>
+
+<Property name="valueAddress">
+<Description><![CDATA[
+Address
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Address</Type>
+<Parameter name="XMLNAME" value="valueAddress"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueAge">
+<Description><![CDATA[
+Age
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Age</Type>
+<Parameter name="XMLNAME" value="valueAge"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueAnnotation">
+<Description><![CDATA[
+Annotation
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Annotation</Type>
+<Parameter name="XMLNAME" value="valueAnnotation"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueAttachment">
+<Description><![CDATA[
+Attachment
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Attachment</Type>
+<Parameter name="XMLNAME" value="valueAttachment"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueBase64Binary">
+<Description><![CDATA[
+base64Binary
+<p>
+Value of extension.]]></Description>
+<Type>%Binary</Type>
+<Parameter name="XMLNAME" value="valueBase64Binary"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="valueBoolean">
+<Description><![CDATA[
+boolean
+<p>
+Value of extension.]]></Description>
+<Type>%Boolean</Type>
+<Parameter name="XMLNAME" value="valueBoolean"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="valueCanonical">
+<Description><![CDATA[
+canonical
+<p>
+Value of extension.
+<p>
+TO DO: Unrecognized value type for the FHIR4 model]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="valueCanonical"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="valueCode">
+<Description><![CDATA[
+code
+<p>
+Value of extension.
+<p>
+any FHIR4 code from any ValueSet may be used.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="valueCode"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="valueCodeableConcept">
+<Description><![CDATA[
+CodeableConcept
+<p>
+Value of extension.
+<p>
+any FHIR4 code from any ValueSet may be used.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept</Type>
+<Parameter name="XMLNAME" value="valueCodeableConcept"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueCoding">
+<Description><![CDATA[
+Coding
+<p>
+Value of extension.
+<p>
+any FHIR4 code from any ValueSet may be used.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Coding</Type>
+<Parameter name="XMLNAME" value="valueCoding"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueContactDetail">
+<Description><![CDATA[
+ContactDetail
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.ContactDetail</Type>
+<Parameter name="XMLNAME" value="valueContactDetail"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueContactPoint">
+<Description><![CDATA[
+ContactPoint
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.ContactPoint</Type>
+<Parameter name="XMLNAME" value="valueContactPoint"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueContributor">
+<Description><![CDATA[
+Contributor
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Contributor</Type>
+<Parameter name="XMLNAME" value="valueContributor"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueCount">
+<Description><![CDATA[
+Count
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Count</Type>
+<Parameter name="XMLNAME" value="valueCount"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueDataRequirement">
+<Description><![CDATA[
+DataRequirement
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.DataRequirement</Type>
+<Parameter name="XMLNAME" value="valueDataRequirement"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueDate">
+<Description><![CDATA[
+date
+<p>
+Value of extension.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="valueDate"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="valueDateTime">
+<Description><![CDATA[
+dateTime
+<p>
+Value of extension.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="valueDateTime"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="valueDecimal">
+<Description><![CDATA[
+decimal
+<p>
+Value of extension.]]></Description>
+<Type>%Decimal</Type>
+<Parameter name="XMLNAME" value="valueDecimal"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="valueDistance">
+<Description><![CDATA[
+Distance
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Distance</Type>
+<Parameter name="XMLNAME" value="valueDistance"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueDosage">
+<Description><![CDATA[
+Dosage
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Element.Dosage</Type>
+<Parameter name="XMLNAME" value="valueDosage"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueDuration">
+<Description><![CDATA[
+Duration
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Duration</Type>
+<Parameter name="XMLNAME" value="valueDuration"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueExpression">
+<Description><![CDATA[
+Expression
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Expression</Type>
+<Parameter name="XMLNAME" value="valueExpression"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueHumanName">
+<Description><![CDATA[
+HumanName
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.HumanName</Type>
+<Parameter name="XMLNAME" value="valueHumanName"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueId">
+<Description><![CDATA[
+id
+<p>
+Value of extension.
+<p>
+TO DO: Unrecognized value type for the FHIR4 model]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="valueId"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="valueIdentifier">
+<Description><![CDATA[
+Identifier
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Identifier</Type>
+<Parameter name="XMLNAME" value="valueIdentifier"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueInstant">
+<Description><![CDATA[
+instant
+<p>
+Value of extension.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="valueInstant"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="valueInteger">
+<Description><![CDATA[
+integer
+<p>
+Value of extension.]]></Description>
+<Type>%Integer</Type>
+<Parameter name="XMLNAME" value="valueInteger"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="valueMarkdown">
+<Description><![CDATA[
+markdown
+<p>
+Value of extension.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="valueMarkdown"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="valueMeta">
+<Description><![CDATA[
+Meta
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Meta</Type>
+<Parameter name="XMLNAME" value="valueMeta"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueMoney">
+<Description><![CDATA[
+Money
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Money</Type>
+<Parameter name="XMLNAME" value="valueMoney"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueOid">
+<Description><![CDATA[
+oid
+<p>
+Value of extension.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="valueOid"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="valueParameterDefinition">
+<Description><![CDATA[
+ParameterDefinition
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.ParameterDefinition</Type>
+<Parameter name="XMLNAME" value="valueParameterDefinition"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valuePeriod">
+<Description><![CDATA[
+Period
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Period</Type>
+<Parameter name="XMLNAME" value="valuePeriod"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valuePositiveInt">
+<Description><![CDATA[
+positiveInt
+<p>
+Value of extension.]]></Description>
+<Type>%Integer</Type>
+<Parameter name="XMLNAME" value="valuePositiveInt"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="valueQuantity">
+<Description><![CDATA[
+Quantity
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Quantity</Type>
+<Parameter name="XMLNAME" value="valueQuantity"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueRange">
+<Description><![CDATA[
+Range
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Range</Type>
+<Parameter name="XMLNAME" value="valueRange"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueRatio">
+<Description><![CDATA[
+Ratio
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Ratio</Type>
+<Parameter name="XMLNAME" value="valueRatio"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueReference">
+<Description><![CDATA[
+Reference
+<p>
+Value of extension.
+<p>
+Any FHIR4 Resource may be indicated by this Reference.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Reference</Type>
+<Parameter name="XMLNAME" value="valueReference"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueRelatedArtifact">
+<Description><![CDATA[
+RelatedArtifact
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.RelatedArtifact</Type>
+<Parameter name="XMLNAME" value="valueRelatedArtifact"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueSampledData">
+<Description><![CDATA[
+SampledData
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.SampledData</Type>
+<Parameter name="XMLNAME" value="valueSampledData"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueSignature">
+<Description><![CDATA[
+Signature
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Signature</Type>
+<Parameter name="XMLNAME" value="valueSignature"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueString">
+<Description><![CDATA[
+string
+<p>
+Value of extension.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="valueString"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="valueTime">
+<Description><![CDATA[
+time
+<p>
+Value of extension.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="valueTime"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="valueTiming">
+<Description><![CDATA[
+Timing
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Timing</Type>
+<Parameter name="XMLNAME" value="valueTiming"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueTriggerDefinition">
+<Description><![CDATA[
+TriggerDefinition
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.TriggerDefinition</Type>
+<Parameter name="XMLNAME" value="valueTriggerDefinition"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueUnsignedInt">
+<Description><![CDATA[
+unsignedInt
+<p>
+Value of extension.]]></Description>
+<Type>%Integer</Type>
+<Parameter name="XMLNAME" value="valueUnsignedInt"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="valueUri">
+<Description><![CDATA[
+uri
+<p>
+Value of extension.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="valueUri"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="valueUrl">
+<Description><![CDATA[
+url
+<p>
+Value of extension.
+<p>
+TO DO: Unrecognized value type for the FHIR4 model]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="valueUrl"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="valueUsageContext">
+<Description><![CDATA[
+UsageContext
+<p>
+Value of extension.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.UsageContext</Type>
+<Parameter name="XMLNAME" value="valueUsageContext"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="valueUuid">
+<Description><![CDATA[
+uuid
+<p>
+Value of extension.
+<p>
+TO DO: Unrecognized value type for the FHIR4 model]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="valueUuid"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Parameter name="ELEMENTQUALIFIED">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLNAME">
+<Default>Extension</Default>
+</Parameter>
+
+<Parameter name="XMLPROJECTION">
+<Default>ELEMENT</Default>
+</Parameter>
+
+<Parameter name="XMLSEQUENCE">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLTYPE">
+<Default>Extension</Default>
+</Parameter>
+</Class>
+
+
+<Class name="PIPELINE.DTL.FHIR.vR4.Model.Base.Meta">
+<Description>
+Metadata about a resource.</Description>
+<ProcedureBlock>0</ProcedureBlock>
+<Super>HS.FHIR.DTL.vR4.Model.Base.Element</Super>
+<TimeChanged>67412,67784.9708395</TimeChanged>
+<TimeCreated>67050,61786.5980917</TimeCreated>
+
+<Property name="versionId">
+<Description><![CDATA[
+id
+<p>
+Version specific identifier.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="versionId"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="lastUpdated">
+<Description><![CDATA[
+instant
+<p>
+When the resource version last changed.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="lastUpdated"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="source">
+<Description><![CDATA[
+uri
+<p>
+Identifies where the resource comes from.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="source"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="profile">
+<Description><![CDATA[
+canonical
+<p>
+Profiles this resource claims to conform to.
+<p>
+TO DO: Unrecognized value type for the FHIR4 model]]></Description>
+<Type>%String</Type>
+<Collection>list</Collection>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="profile"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="security">
+<Description><![CDATA[
+Coding
+<p>
+Security Labels applied to this resource.
+<p>
+security-labels is the REQUIRED FHIR4 ValueSet for codes, 
+but if you need to express meanings not found in security-labels, 
+you may formally EXTEND security-labels to add codes to it.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Coding</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="security"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="tag">
+<Description><![CDATA[
+Coding
+<p>
+Tags applied to this resource.
+<p>
+any FHIR4 code may be used; 
+common-tags shows EXAMPLE codes, 
+but you may use codes from any ValueSet.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Coding</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="tag"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Parameter name="ELEMENTQUALIFIED">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLNAME">
+<Default>Meta</Default>
+</Parameter>
+
+<Parameter name="XMLPROJECTION">
+<Default>ELEMENT</Default>
+</Parameter>
+
+<Parameter name="XMLSEQUENCE">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLTYPE">
+<Default>Meta</Default>
+</Parameter>
+</Class>
+
+
+<Class name="PIPELINE.DTL.FHIR.vR4.Model.Base.Narrative">
+<Description>
+Human-readable summary of the resource (essential clinical and business information)</Description>
+<ProcedureBlock>0</ProcedureBlock>
+<Super>HS.FHIR.DTL.vR4.Model.Base.Element</Super>
+<TimeChanged>67412,67799.5269856</TimeChanged>
+<TimeCreated>67050,61786.6297927</TimeCreated>
+
+<Property name="status">
+<Description><![CDATA[
+code
+<p>
+generated | extensions | additional | empty
+<p>
+narrative-status|4.0.1 is the REQUIRED FHIR4 ValueSet for codes; 
+you may NOT extend narrative-status|4.0.1 and you may NOT use codes from other ValueSets.]]></Description>
+<Type>%String</Type>
+<Required>1</Required>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="status"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="div">
+<Description><![CDATA[
+xhtml
+<p>
+Limited xhtml content.
+<p>
+TO DO: Unrecognized value type for the FHIR4 model]]></Description>
+<Type>%String</Type>
+<Required>1</Required>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="REFELEMENTQUALIFIED" value="1"/>
+<Parameter name="REFNAMESPACE" value="http://www.w3.org/1999/xhtml"/>
+<Parameter name="XMLNAME" value="div"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+<Parameter name="XMLREF" value="1"/>
+</Property>
+
+<Parameter name="ELEMENTQUALIFIED">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLNAME">
+<Default>Narrative</Default>
+</Parameter>
+
+<Parameter name="XMLPROJECTION">
+<Default>ELEMENT</Default>
+</Parameter>
+
+<Parameter name="XMLSEQUENCE">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLTYPE">
+<Default>Narrative</Default>
+</Parameter>
+</Class>
+
+
+<Class name="PIPELINE.DTL.FHIR.vR4.Model.Base.Reference">
+<Description>
+A reference from one resource to another.</Description>
+<ProcedureBlock>0</ProcedureBlock>
+<Super>HS.FHIR.DTL.vR4.Model.Base.Element</Super>
+<TimeChanged>67412,67811.7106709</TimeChanged>
+<TimeCreated>67050,61786.6476324</TimeCreated>
+
+<Property name="reference">
+<Description><![CDATA[
+string
+<p>
+Literal reference, 
+Relative, 
+internal or absolute URL.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="reference"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="type">
+<Description><![CDATA[
+uri
+<p>
+Type the reference refers to (e.g. 
+\"Patient\")]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="type"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="identifier">
+<Description><![CDATA[
+Identifier
+<p>
+Logical reference, 
+when literal reference is not known.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Identifier</Type>
+<Parameter name="XMLNAME" value="identifier"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="display">
+<Description><![CDATA[
+string
+<p>
+Text alternative for the resource.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="display"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Parameter name="ELEMENTQUALIFIED">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLNAME">
+<Default>Reference</Default>
+</Parameter>
+
+<Parameter name="XMLPROJECTION">
+<Default>ELEMENT</Default>
+</Parameter>
+
+<Parameter name="XMLSEQUENCE">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLTYPE">
+<Default>Reference</Default>
+</Parameter>
+</Class>
+
+
+<Class name="PIPELINE.DTL.FHIR.vR4.Model.Base.Resource">
+<Description>
+Base Resource.</Description>
+<ProcedureBlock>0</ProcedureBlock>
+<Super>%Library.RegisteredObject,HS.FHIR.DTL.Util.XML.Adapter,HS.FHIR.DTL.Util.JSON.Adapter,%XML.Adaptor</Super>
+<TimeChanged>67412,67822.9088476</TimeChanged>
+<TimeCreated>67050,61786.6847101</TimeCreated>
+<Inheritance>right</Inheritance>
+
+<Property name="id">
+</Property>
+
+<Property name="meta">
+<Description><![CDATA[
+Meta
+<p>
+Metadata about the resource.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Meta</Type>
+<Parameter name="XMLNAME" value="meta"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="implicitRules">
+<Description><![CDATA[
+uri
+<p>
+A set of rules under which this content was created.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="implicitRules"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="language">
+<Description><![CDATA[
+code
+<p>
+Language of the resource content.
+<p>
+languages is the PREFERRED FHIR4 ValueSet for codes, 
+but if you need to express meanings not found in languages, 
+you may use codes from any ValueSet.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="language"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="newResource">
+<Description>
+Generated property, not a FHIR element: Storage space for 'contained' resources that are actually separate from the parent, and need to be serialized as separate objects.</Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Resource</Type>
+<Collection>list</Collection>
+</Property>
+
+<Property name="newResourceReference">
+<Description>
+Generated property, not a FHIR element: Storage space for the location the corresponding newResource entry reference should be stored in after adding it to a repository</Description>
+<Type>%String</Type>
+</Property>
+
+<Property name="primitiveExtension">
+<Description>
+Generated property, not a FHIR element: Storage space for extensions of any elements that have a primitive data type.</Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Extension</Type>
+<Collection>list</Collection>
+</Property>
+
+<Property name="resourceType">
+<Description>
+Generated property, not a FHIR element: returns the resource type for the resource object.</Description>
+<Type>%String</Type>
+<Calculated>1</Calculated>
+</Property>
+
+<Method name="resourceTypeGet">
+<ReturnType>%String</ReturnType>
+<Implementation><![CDATA[ quit ..%ClassName(0)
+]]></Implementation>
+</Method>
+
+<Parameter name="ELEMENTQUALIFIED">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLNAME">
+<Default>Resource</Default>
+</Parameter>
+
+<Parameter name="XMLPROJECTION">
+<Default>ELEMENT</Default>
+</Parameter>
+
+<Parameter name="XMLSEQUENCE">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLTYPE">
+<Default>Resource</Default>
+</Parameter>
+</Class>
+
+
+<Class name="PIPELINE.DTL.FHIR.vR4.Model.Datatype.CodeableConcept">
+<Description>
+Concept - reference to a terminology or just  text.</Description>
+<ProcedureBlock>0</ProcedureBlock>
+<Super>PIPELINE.DTL.FHIR.vR4.Model.Base.Element</Super>
+<TimeChanged>67412,68099.0908392</TimeChanged>
+<TimeCreated>67050,61786.76398</TimeCreated>
+
+<Property name="coding">
+<Description><![CDATA[
+Coding
+<p>
+Code defined by a terminology system.
+<p>
+any FHIR4 code from any ValueSet may be used.]]></Description>
+<Type>PIPELINE.DTL.FHIR.vR4.Model.Datatype.Coding</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="coding"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="text">
+<Description><![CDATA[
+string
+<p>
+Plain text representation of the concept.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="text"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Parameter name="ELEMENTQUALIFIED">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLNAME">
+<Default>CodeableConcept</Default>
+</Parameter>
+
+<Parameter name="XMLPROJECTION">
+<Default>ELEMENT</Default>
+</Parameter>
+
+<Parameter name="XMLSEQUENCE">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLTYPE">
+<Default>CodeableConcept</Default>
+</Parameter>
+</Class>
+
+
+<Class name="PIPELINE.DTL.FHIR.vR4.Model.Datatype.Coding">
+<Description>
+A reference to a code defined by a terminology system.</Description>
+<ProcedureBlock>0</ProcedureBlock>
+<Super>PIPELINE.DTL.FHIR.vR4.Model.Base.Element</Super>
+<TimeChanged>67412,67881.0939788</TimeChanged>
+<TimeCreated>67050,61786.8104706</TimeCreated>
+
+<Property name="system">
+<Description><![CDATA[
+uri
+<p>
+Identity of the terminology system.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="system"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="version">
+<Description><![CDATA[
+string
+<p>
+Version of the system - if relevant.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="version"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="code">
+<Description><![CDATA[
+code
+<p>
+Symbol in syntax defined by the system.
+<p>
+any FHIR4 code from any ValueSet may be used.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="code"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="display">
+<Description><![CDATA[
+string
+<p>
+Representation defined by the system.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="display"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="userSelected">
+<Description><![CDATA[
+boolean
+<p>
+If this coding was chosen directly by the user.]]></Description>
+<Type>%Boolean</Type>
+<Parameter name="XMLNAME" value="userSelected"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Parameter name="ELEMENTQUALIFIED">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLNAME">
+<Default>Coding</Default>
+</Parameter>
+
+<Parameter name="XMLPROJECTION">
+<Default>ELEMENT</Default>
+</Parameter>
+
+<Parameter name="XMLSEQUENCE">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLTYPE">
+<Default>Coding</Default>
+</Parameter>
+</Class>
+
+
+<Class name="PIPELINE.DTL.FHIR.vR4.Model.Datatype.Identifier">
+<Description>
+An identifier intended for computation.</Description>
+<ProcedureBlock>0</ProcedureBlock>
+<Super>HS.FHIR.DTL.vR4.Model.Base.Element</Super>
+<TimeChanged>67412,42281.759804</TimeChanged>
+<TimeCreated>67050,61786.9866849</TimeCreated>
+
+<Property name="use">
+<Description><![CDATA[
+code
+<p>
+usual | official | temp | secondary | old (If known)
+<p>
+identifier-use|4.0.1 is the REQUIRED FHIR4 ValueSet for codes; 
+you may NOT extend identifier-use|4.0.1 and you may NOT use codes from other ValueSets.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="use"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="type">
+<Description><![CDATA[
+CodeableConcept
+<p>
+Description of identifier.
+<p>
+identifier-type is the REQUIRED FHIR4 ValueSet for codes, 
+but if you need to express meanings not found in identifier-type, 
+you may formally EXTEND identifier-type to add codes to it.]]></Description>
+<Type>PIPELINE.DTL.FHIR.vR4.Model.Datatype.CodeableConcept</Type>
+<Parameter name="XMLNAME" value="type"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="system">
+<Description><![CDATA[
+uri
+<p>
+The namespace for the identifier value.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="system"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="value">
+<Description><![CDATA[
+string
+<p>
+The value that is unique.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="value"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="period">
+<Description><![CDATA[
+Period
+<p>
+Time period when id is/was valid for use.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Period</Type>
+<Parameter name="XMLNAME" value="period"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="assigner">
+<Description><![CDATA[
+Reference
+<p>
+Organization that issued id (may be just text)
+<p>
+Organization]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Reference</Type>
+<Parameter name="XMLNAME" value="assigner"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Parameter name="ELEMENTQUALIFIED">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLNAME">
+<Default>Identifier</Default>
+</Parameter>
+
+<Parameter name="XMLPROJECTION">
+<Default>ELEMENT</Default>
+</Parameter>
+
+<Parameter name="XMLSEQUENCE">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLTYPE">
+<Default>Identifier</Default>
+</Parameter>
+</Class>
+
+
+<Class name="PIPELINE.DTL.FHIR.vR4.Model.Resource.Condition">
+<Description>
+Detailed information about conditions, 
+problems or diagnoses.</Description>
+<ProcedureBlock>0</ProcedureBlock>
+<Super>HS.FHIR.DTL.vR4.Model.Base.DomainResource</Super>
+<TimeChanged>67412,66147.2906175</TimeChanged>
+<TimeCreated>67050,61799.0451271</TimeCreated>
+
+<Property name="identifier">
+<Description><![CDATA[
+Identifier
+<p>
+External Ids for this condition.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Identifier</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="identifier"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="clinicalStatus">
+<Description><![CDATA[
+CodeableConcept
+<p>
+active | recurrence | relapse | inactive | remission | resolved
+<p>
+condition-clinical|4.0.1 is the REQUIRED FHIR4 ValueSet for codes; 
+you may NOT extend condition-clinical|4.0.1 and you may NOT use codes from other ValueSets.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept</Type>
+<Parameter name="XMLNAME" value="clinicalStatus"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="verificationStatus">
+<Description><![CDATA[
+CodeableConcept
+<p>
+unconfirmed | provisional | differential | confirmed | refuted | entered-in-error
+<p>
+condition-ver-status|4.0.1 is the REQUIRED FHIR4 ValueSet for codes; 
+you may NOT extend condition-ver-status|4.0.1 and you may NOT use codes from other ValueSets.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept</Type>
+<Parameter name="XMLNAME" value="verificationStatus"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="category">
+<Description><![CDATA[
+CodeableConcept
+<p>
+problem-list-item | encounter-diagnosis
+<p>
+condition-category is the REQUIRED FHIR4 ValueSet for codes, 
+but if you need to express meanings not found in condition-category, 
+you may formally EXTEND condition-category to add codes to it.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="category"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="severity">
+<Description><![CDATA[
+CodeableConcept
+<p>
+Subjective severity of condition.
+<p>
+condition-severity is the PREFERRED FHIR4 ValueSet for codes, 
+but if you need to express meanings not found in condition-severity, 
+you may use codes from any ValueSet.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept</Type>
+<Parameter name="XMLNAME" value="severity"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="code">
+<Description><![CDATA[
+CodeableConcept
+<p>
+Identification of the condition, 
+problem or diagnosis.
+<p>
+any FHIR4 code may be used; 
+condition-code shows EXAMPLE codes, 
+but you may use codes from any ValueSet.]]></Description>
+<Type>PIPELINE.DTL.FHIR.vR4.Model.Datatype.CodeableConcept</Type>
+<Parameter name="XMLNAME" value="code"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="bodySite">
+<Description><![CDATA[
+CodeableConcept
+<p>
+Anatomical location, 
+if relevant.
+<p>
+any FHIR4 code may be used; 
+body-site shows EXAMPLE codes, 
+but you may use codes from any ValueSet.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="bodySite"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="subject">
+<Description><![CDATA[
+Reference
+<p>
+Who has the condition?
+<p>
+Patient | Group]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Reference</Type>
+<Required>1</Required>
+<Parameter name="XMLNAME" value="subject"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="encounter">
+<Description><![CDATA[
+Reference
+<p>
+Encounter created as part of.
+<p>
+Encounter]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Reference</Type>
+<Parameter name="XMLNAME" value="encounter"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="onsetAge">
+<Description><![CDATA[
+Age
+<p>
+Estimated or actual date, 
+ date-time, 
+or age.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Age</Type>
+<Parameter name="XMLNAME" value="onsetAge"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="onsetDateTime">
+<Description><![CDATA[
+dateTime
+<p>
+Estimated or actual date, 
+ date-time, 
+or age.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="onsetDateTime"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="onsetPeriod">
+<Description><![CDATA[
+Period
+<p>
+Estimated or actual date, 
+ date-time, 
+or age.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Period</Type>
+<Parameter name="XMLNAME" value="onsetPeriod"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="onsetRange">
+<Description><![CDATA[
+Range
+<p>
+Estimated or actual date, 
+ date-time, 
+or age.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Range</Type>
+<Parameter name="XMLNAME" value="onsetRange"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="onsetString">
+<Description><![CDATA[
+string
+<p>
+Estimated or actual date, 
+ date-time, 
+or age.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="onsetString"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="abatementAge">
+<Description><![CDATA[
+Age
+<p>
+When in resolution/remission.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Age</Type>
+<Parameter name="XMLNAME" value="abatementAge"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="abatementDateTime">
+<Description><![CDATA[
+dateTime
+<p>
+When in resolution/remission.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="abatementDateTime"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="abatementPeriod">
+<Description><![CDATA[
+Period
+<p>
+When in resolution/remission.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Period</Type>
+<Parameter name="XMLNAME" value="abatementPeriod"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="abatementRange">
+<Description><![CDATA[
+Range
+<p>
+When in resolution/remission.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Range</Type>
+<Parameter name="XMLNAME" value="abatementRange"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="abatementString">
+<Description><![CDATA[
+string
+<p>
+When in resolution/remission.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="abatementString"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="recordedDate">
+<Description><![CDATA[
+dateTime
+<p>
+Date record was first recorded.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="recordedDate"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="recorder">
+<Description><![CDATA[
+Reference
+<p>
+Who recorded the condition.
+<p>
+Practitioner | PractitionerRole | Patient | RelatedPerson]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Reference</Type>
+<Parameter name="XMLNAME" value="recorder"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="asserter">
+<Description><![CDATA[
+Reference
+<p>
+Person who asserts this condition.
+<p>
+Practitioner | PractitionerRole | Patient | RelatedPerson]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Reference</Type>
+<Parameter name="XMLNAME" value="asserter"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="stage">
+<Description><![CDATA[
+BackboneElement
+<p>
+Stage/grade, 
+usually assessed formally.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Element.Condition.stage</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="stage"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="evidence">
+<Description><![CDATA[
+BackboneElement
+<p>
+Supporting evidence.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Element.Condition.evidence</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="evidence"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="note">
+<Description><![CDATA[
+Annotation
+<p>
+Additional information about the Condition.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Annotation</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="note"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Parameter name="ELEMENTQUALIFIED">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLNAME">
+<Default>Condition</Default>
+</Parameter>
+
+<Parameter name="XMLPROJECTION">
+<Default>ELEMENT</Default>
+</Parameter>
+
+<Parameter name="XMLSEQUENCE">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLTYPE">
+<Default>Condition</Default>
+</Parameter>
+</Class>
+
+
+<Class name="PIPELINE.DTL.FHIR.vR4.Model.Resource.Patient">
+<Description>
+Information about an individual or animal receiving health care services.</Description>
+<Super>HS.FHIR.DTL.vR4.Model.Resource.Patient</Super>
+<TimeChanged>67412,41611.4937086</TimeChanged>
+<TimeCreated>67050,61800.8661162</TimeCreated>
+
+<Property name="identifier">
+<Description><![CDATA[
+Identifier
+<p>
+An identifier for this patient.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Identifier</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="identifier"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="active">
+<Description><![CDATA[
+boolean
+<p>
+Whether this patient's record is in active use.]]></Description>
+<Type>%Boolean</Type>
+<Parameter name="XMLNAME" value="active"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="name">
+<Description><![CDATA[
+HumanName
+<p>
+A name associated with the patient.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.HumanName</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="name"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="telecom">
+<Description><![CDATA[
+ContactPoint
+<p>
+A contact detail for the individual.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.ContactPoint</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="telecom"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="gender">
+<Description><![CDATA[
+code
+<p>
+male | female | other | unknown
+<p>
+administrative-gender|4.0.1 is the REQUIRED FHIR4 ValueSet for codes; 
+you may NOT extend administrative-gender|4.0.1 and you may NOT use codes from other ValueSets.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="gender"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="birthDate">
+<Description><![CDATA[
+date
+<p>
+The date of birth for the individual.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="dateOfBirth"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="deceasedBoolean">
+<Description><![CDATA[
+boolean
+<p>
+Indicates if the individual is deceased or not.]]></Description>
+<Type>%Boolean</Type>
+<Parameter name="XMLNAME" value="deceasedBoolean"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="deceasedDateTime">
+<Description><![CDATA[
+dateTime
+<p>
+Indicates if the individual is deceased or not.]]></Description>
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="1000000"/>
+<Parameter name="XMLNAME" value="deceasedDateTime"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="address">
+<Description><![CDATA[
+Address
+<p>
+An address for the individual.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Address</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="address"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="maritalStatus">
+<Description><![CDATA[
+CodeableConcept
+<p>
+Marital (civil) status of a patient.
+<p>
+marital-status is the REQUIRED FHIR4 ValueSet for codes, 
+but if you need to express meanings not found in marital-status, 
+you may formally EXTEND marital-status to add codes to it.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.CodeableConcept</Type>
+<Parameter name="XMLNAME" value="maritalStatus"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="multipleBirthBoolean">
+<Description><![CDATA[
+boolean
+<p>
+Whether patient is part of a multiple birth.]]></Description>
+<Type>%Boolean</Type>
+<Parameter name="XMLNAME" value="multipleBirthBoolean"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="multipleBirthInteger">
+<Description><![CDATA[
+integer
+<p>
+Whether patient is part of a multiple birth.]]></Description>
+<Type>%Integer</Type>
+<Parameter name="XMLNAME" value="multipleBirthInteger"/>
+<Parameter name="XMLPROJECTION" value="ATTRIBUTE"/>
+</Property>
+
+<Property name="photo">
+<Description><![CDATA[
+Attachment
+<p>
+Image of the patient.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Datatype.Attachment</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="photo"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="contact">
+<Description><![CDATA[
+BackboneElement
+<p>
+A contact party (e.g. 
+guardian, 
+partner, 
+friend) for the patient.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Element.Patient.contact</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="contact"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="communication">
+<Description><![CDATA[
+BackboneElement
+<p>
+A language which may be used to communicate with the patient about his or her health.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Element.Patient.communication</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="communication"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="generalPractitioner">
+<Description><![CDATA[
+Reference
+<p>
+Patient's nominated primary care provider.
+<p>
+Organization | Practitioner | PractitionerRole]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Reference</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="generalPractitioner"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="managingOrganization">
+<Description><![CDATA[
+Reference
+<p>
+Organization that is the custodian of the patient record.
+<p>
+Organization]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Base.Reference</Type>
+<Parameter name="XMLNAME" value="managingOrganization"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Property name="link">
+<Description><![CDATA[
+BackboneElement
+<p>
+Link to another patient resource that concerns the same actual person.]]></Description>
+<Type>HS.FHIR.DTL.vR4.Model.Element.Patient.link</Type>
+<Collection>list</Collection>
+<Parameter name="XMLNAME" value="link"/>
+<Parameter name="XMLPROJECTION" value="ELEMENT"/>
+</Property>
+
+<Parameter name="ELEMENTQUALIFIED">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLNAME">
+<Default>Patient</Default>
+</Parameter>
+
+<Parameter name="XMLPROJECTION">
+<Default>ELEMENT</Default>
+</Parameter>
+
+<Parameter name="XMLSEQUENCE">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="XMLTYPE">
+<Default>Patient</Default>
+</Parameter>
+</Class>
+
+
+<Class name="PIPELINE.DTL.HL7.VR4.Bundle">
+<Super>Ens.DataTransformDTL</Super>
+<TimeChanged>67394,73511.629971</TimeChanged>
+<TimeCreated>67394,70197.423377</TimeCreated>
+<DependsOn>EnsLib.HL7.Message,HS.FHIR.DTL.vR4.Model.Resource.Bundle</DependsOn>
+
+<Parameter name="GENERATEEMPTYSEGMENTS">
+<Default>0</Default>
+</Parameter>
+
+<Parameter name="IGNOREMISSINGSOURCE">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="REPORTERRORS">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="TREATEMPTYREPEATINGFIELDASNULL">
+<Default>0</Default>
+</Parameter>
+
+<XData name="DTL">
+<XMLNamespace>http://www.intersystems.com/dtl</XMLNamespace>
+<Data><![CDATA[
+<transform sourceClass='EnsLib.HL7.Message' targetClass='HS.FHIR.DTL.vR4.Model.Resource.Bundle' sourceDocType='2.5:ADT_A01' create='new' language='objectscript' >
+<assign value='$S(source.{EVN:RecordedDateTime}&apos;="":source.{EVN:RecordedDateTime},1:source.{MSH:DateTimeOfMessage})' property='target.meta.lastUpdated' action='set' />
+<if condition='$ISOBJECT(aux)' >
+<true>
+<foreach property='aux' key='k1' >
+<assign value='##class(HS.FHIR.DTL.vR4.Model.Element.Bundle.entry).%New()' property='tmp' action='set' />
+<assign value='aux.GetAt(k1)' property='tmp.resource' action='set' />
+<assign value='target.entry.Insert(tmp)' property='tSC' action='set' />
+</foreach>
+</true>
+</if>
+</transform>
+]]></Data>
+</XData>
+</Class>
+
+
+<Class name="PIPELINE.DTL.HL7.VR4.Condition">
+<Super>Ens.DataTransformDTL</Super>
+<TimeChanged>67412,68184.5904224</TimeChanged>
+<TimeCreated>67411,56190.9258333</TimeCreated>
+<DependsOn>EnsLib.HL7.Message,PIPELINE.DTL.FHIR.vR4.Model.Resource.Condition</DependsOn>
+
+<Parameter name="IGNOREMISSINGSOURCE">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="REPORTERRORS">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="TREATEMPTYREPEATINGFIELDASNULL">
+<Default>0</Default>
+</Parameter>
+
+<XData name="DTL">
+<XMLNamespace>http://www.intersystems.com/dtl</XMLNamespace>
+<Data><![CDATA[
+<transform sourceClass='EnsLib.HL7.Message' targetClass='PIPELINE.DTL.FHIR.vR4.Model.Resource.Condition' sourceDocType='2.5.1:ADT_A01' create='new' language='objectscript' >
+<assign value='source.{MSH:DateTimeOfMessage}' property='target.meta.lastUpdated' action='set' />
+<assign value='source.{DG1():SetIDDG1}' property='target.id' action='set' />
+<foreach property='source.{DG1()}' key='dg1' >
+<assign value='source.{DG1(dg1):DiagnosisCodeDG1.Identifier}' property='target.code.coding.(dg1).code' action='set' />
+<assign value='source.{DG1(dg1):DiagnosisCodeDG1.Text}' property='target.code.coding.(dg1).display' action='set' />
+<assign value='source.{DG1(dg1):DiagnosisCodeDG1.NameofCodingSystem}' property='target.code.coding.(dg1).system' action='set' />
+</foreach>
+<assign value='source.{PV1:VisitNumber}' property='target.encounter.reference' action='set' />
+<assign value='source.{PID:PatientIdentifierList().IDNumber}' property='target.subject.reference' action='set' />
+</transform>
+]]></Data>
+</XData>
+</Class>
+
+
+<Class name="PIPELINE.DTL.HL7.VR4.MessageHeader">
+<Super>Ens.DataTransformDTL</Super>
+<TimeChanged>67394,64017.757966</TimeChanged>
+<TimeCreated>67394,62079.035079</TimeCreated>
+<DependsOn>EnsLib.HL7.Message,HS.FHIR.DTL.vR4.Model.Resource.MessageHeader</DependsOn>
+
+<Parameter name="GENERATEEMPTYSEGMENTS">
+<Default>0</Default>
+</Parameter>
+
+<Parameter name="IGNOREMISSINGSOURCE">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="REPORTERRORS">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="TREATEMPTYREPEATINGFIELDASNULL">
+<Default>0</Default>
+</Parameter>
+
+<XData name="DTL">
+<XMLNamespace>http://www.intersystems.com/dtl</XMLNamespace>
+<Data><![CDATA[
+<transform sourceClass='EnsLib.HL7.Message' targetClass='HS.FHIR.DTL.vR4.Model.Resource.MessageHeader' sourceDocType='2.5:ADT_A01' create='new' language='objectscript' >
+<annotation>Build Message Header Object from HL7 2.5 ADT_A04</annotation>
+<assign value='$s(source.{MSH:MessageControlID}&apos;="":source.{MSH:MessageControlID},source.{MSH:SendingApplication.NamespaceID}&apos;="":source.{MSH:SendingApplication.NamespaceID},1:$SYSTEM.Util.CreateGUID())' property='target.id' action='set' />
+<assign value='$S(source.{EVN:RecordedDateTime}&apos;="":source.{EVN:RecordedDateTime},1:source.{MSH:DateTimeOfMessage})' property='target.meta.lastUpdated' action='set' />
+<assign value='source.{MSH:ReceivingApplication.NamespaceID}_" "_source.{MSH:ReceivingApplication.UniversalID}' property='target.destination.(1).receiver.display' action='set' />
+<assign value='source.{MSH:SendingFacility.UniversalID}_" "_source.{MSH:SendingFacility.NamespaceID}' property='target.sender.display' action='set' />
+<assign value='source.{MSH:SendingFacility.UniversalID}_" "_source.{MSH:SendingFacility.NamespaceID}' property='target.source.name' action='set' />
+</transform>
+]]></Data>
+</XData>
+</Class>
+
+
+<Class name="PIPELINE.DTL.HL7.VR4.Patient">
+<Super>Ens.DataTransformDTL</Super>
+<TimeChanged>67412,42030.6183713</TimeChanged>
+<TimeCreated>67394,64654.069316</TimeCreated>
+<DependsOn>EnsLib.HL7.Message,PIPELINE.DTL.FHIR.vR4.Model.Resource.Patient</DependsOn>
+
+<Parameter name="GENERATEEMPTYSEGMENTS">
+<Default>0</Default>
+</Parameter>
+
+<Parameter name="IGNOREMISSINGSOURCE">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="REPORTERRORS">
+<Default>1</Default>
+</Parameter>
+
+<Parameter name="TREATEMPTYREPEATINGFIELDASNULL">
+<Default>0</Default>
+</Parameter>
+
+<XData name="DTL">
+<XMLNamespace>http://www.intersystems.com/dtl</XMLNamespace>
+<Data><![CDATA[
+<transform sourceClass='EnsLib.HL7.Message' targetClass='PIPELINE.DTL.FHIR.vR4.Model.Resource.Patient' sourceDocType='2.5:ADT_A01' create='new' language='objectscript' >
+<annotation>Build Patient Object from HL7 2.5 ADT_A01</annotation>
+<assign value='source.{MSH:DateTimeOfMessage}' property='target.meta.lastUpdated' action='set' />
+<foreach property='source.{PID:PatientIdentifierList()}' key='k1' >
+<if condition='source.{PID:PatientIdentifierList(k1).IDNumber}&apos;=""' >
+<true>
+<assign value='##class(PIPELINE.DTL.FHIR.vR4.Model.Datatype.Identifier).%New()' property='tIdent' action='set' />
+<assign value='source.{PID:PatientIdentifierList(k1).IDNumber}' property='tIdent.value' action='set' />
+<assign value='source.{PID:PatientIdentifierList(k1).AssigningAuthority}' property='tIdent.system' action='set' />
+<assign value='source.{PID:PatientIdentifierList(k1).IdentifierTypeCode}' property='tIdent.type.text' action='set' />
+<assign value='target.identifier.Insert(tIdent)' property='tSC' action='set' />
+</true>
+</if>
+</foreach>
+<foreach property='source.{PID:AlternatePatientIDPID()}' key='k1' >
+<if condition='source.{PID:AlternatePatientIDPID(k1).IDNumber}&apos;=""' >
+<true>
+<assign value='##class(PIPELINE.DTL.FHIR.vR4.Model.Datatype.Identifier).%New()' property='tIdent' action='set' />
+<assign value='source.{PID:AlternatePatientIDPID(k1).IDNumber}' property='tIdent.value' action='set' />
+<assign value='source.{PID:AlternatePatientIDPID(k1).AssigningAuthority}' property='tIdent.system' action='set' />
+<assign value='source.{PID:AlternatePatientIDPID(k1).IdentifierTypeCode}' property='tIdent.type.text' action='set' />
+<assign value='target.identifier.Insert(tIdent)' property='tSC' action='set' />
+</true>
+</if>
+</foreach>
+<assign value='source.{PID:PatientName().FamilyName}' property='target.name.(1).family' action='set' />
+<assign value='source.{PID:PatientName().Suffix}' property='target.name.(1).suffix.(1)' action='set' />
+<assign value='source.{PID:PatientName().FamilyName}_" "_source.{PID:PatientName().SecondandFurtherGivenNamesor}' property='target.name.(1).given.(1)' action='set' />
+<assign value='source.{PID:PatientName().Prefix}' property='target.name.(1).prefix.(1)' action='set' />
+<assign value='source.{PID:DateTimeofBirth}' property='target.birthDate' action='set' />
+<if condition='source.{PID:AdministrativeSex}="M"' >
+<true>
+<assign value='"Male"' property='target.gender' action='set' />
+</true>
+</if>
+<assign value='source.{PID:PatientAddress().StreetAddress}' property='target.address.(1).line.(1)' action='set' />
+<assign value='source.{PID:PatientAddress().City}' property='target.address.(1).city' action='set' />
+<assign value='source.{PID:PatientAddress().StateorProvince}' property='target.address.(1).state' action='set' />
+<assign value='source.{PID:PatientAddress().ZiporPostalCode}' property='target.address.(1).postalCode' action='set' />
+<assign value='source.{PID:PatientAddress().Country}' property='target.address.(1).country' action='set' />
+<if condition='source.{PID:PhoneNumberHome()TelephoneNumber}&apos;=""' >
+<true>
+<assign value='##class(HS.FHIR.DTL.vR4.Model.Datatype.ContactPoint).%New()' property='tPTeleCom' action='set' />
+<assign value='source.{PID:PhoneNumberHome().TelecommunicationUseCode}' property='tPTeleCom.use' action='set' />
+<assign value='source.{PID:PhoneNumberHome().TelecommunicationEquipmentTy}' property='tPTeleCom.system' action='set' />
+<assign value='source.{PID:PhoneNumberHome().TelephoneNumber}' property='tPTeleCom.value' action='set' />
+<assign value='target.telecom.Insert(tPTeleCom)' property='tSC' action='set' />
+</true>
+</if>
+<if condition='source.{PID:PhoneNumberBusiness()TelephoneNumber}&apos;=""' >
+<true>
+<assign value='##class(HS.FHIR.DTL.vR4.Model.Datatype.ContactPoint).%New()' property='tWTeleCom' action='set' />
+<assign value='source.{PID:PhoneNumberBusiness().TelecommunicationUseCode}' property='tWTeleCom.use' action='set' />
+<assign value='source.{PID:PhoneNumberBusiness().TelecommunicationEquipmentTy}' property='tWTeleCom.system' action='set' />
+<assign value='source.{PID:PhoneNumberBusiness().TelephoneNumber}' property='tWTeleCom.value' action='set' />
+<assign value='target.telecom.Insert(tWTeleCom)' property='tSC' action='set' />
+</true>
+</if>
+<assign value='source.{PD1:PatientPrimaryCareProviderNa().IDNumber}' property='target.generalPractitioner.(1).reference' action='set' />
+</transform>
+]]></Data>
+</XData>
+</Class>
+
+
+<Class name="PIPELINE.HL7.HL7ToSDA3">
+<Super>HS.Gateway.HL7.HL7ToSDA3</Super>
+<TimeChanged>67386,62656.874632</TimeChanged>
+<TimeCreated>67386,62420.324592</TimeCreated>
+</Class>
+
+
+<Class name="PIPELINE.Operation.BadMessageHandler">
+<Super>EnsLib.HL7.Operation.FileOperation,HS.Util.Trace.Helper</Super>
+<TimeChanged>67396,22773.8364929</TimeChanged>
+<TimeCreated>67381,58573.0823121</TimeCreated>
+
+<Parameter name="ADAPTER">
+<Description>
+The adapter of this file operation</Description>
+<Default>EnsLib.File.OutboundAdapter</Default>
+</Parameter>
+
+<Parameter name="SETTINGS">
+<Description>
+Adjusts operation settings in UI to remove filename since it will be auto-generated</Description>
+<Default>-Filename</Default>
+</Parameter>
+
+<Method name="OnMessage">
+<FormalSpec>pRequest:EnsLib.HL7.Message</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	set tSC = $$$OK
+		
+	TRY {
+		
+		//set pResponse = ##class(DV.ADT.BadMessageHL7Response).%New()
+		#Dim tFileAdapter As EnsLib.File.OutboundAdapter = ..Adapter
+		Set tHL7InDirectory = ##class(Ens.Util.File).fixPath(..Adapter.FilePath)
+		$$$HSTRACE("Source Directory: "_tHL7InDirectory)
+
+		Set tSendingApp = pRequest.GetValueAt("MSH:3.1")
+
+		// Identify the Vendor-specific subdirectory using SendingApp name  
+		// Replace comma/space/slashes in SendingApp name with underscores and use that as the subdirectory name
+		Set tSendingAppSubdirName = $Translate(tSendingApp, " ,\/", "____")
+		$$$HSTRACE("Sending Name : "_tSendingAppSubdirName)
+		
+		// Prepare Sending App Directory absolute path to place the file
+		Set tSendingAppAbsolutePath = ##class(Ens.Util.File).fixPath(tHL7InDirectory_tSendingAppSubdirName)
+		$$$HSTRACE("Sending Path : "_tSendingAppAbsolutePath)
+
+			//Check if the Vendor-specific sub-direcotry exists & create if needed(first message from Vendor)
+			If '##class(%File).DirectoryExists(tSendingAppAbsolutePath) {
+				If '##class(%File).CreateDirectory(tSendingAppAbsolutePath, .tOSErrorCode) {
+					$$$ThrowOnError($$$ERROR($$$GeneralError,"Failed to create new directory '"_tSendingAppSubdirName_"' under parent path '"_tHL7InDirectory_"'. The OS returned error code '"_tOSErrorCode_"'."))
+				}
+			}
+		
+		// Prepare filename to write the data
+		set tFileName = ..ConstructFilename(pRequest)
+		$$$HSTRACE("Filename : "_tFileName)
+		
+		// Set the Adapter FilePath to use Vendor-specific sub-direcotry to place the file
+		// set ..Adapter.FilePath = tSendingAppAbsolutePath
+		
+		// Create the file and write the data into the file
+		// Set tSC=..outputDocument(tFileName,pRequest,..Separators,1)
+		
+		Set tFileStreamRelativePath = ##class(Ens.Util.File).fixPath(tSendingAppSubdirName)_tFileName
+		$$$HSTRACE("Full Path: "_tFileStreamRelativePath)
+		$$$ThrowOnError(tFileAdapter.PutStream(tFileStreamRelativePath, pRequest))
+		
+		if $$$ISERR(tSC)
+		{
+			$$$HSTRACE("Write Error !! | "_$System.Status.GetErrorText(tSC))
+			$$$ThrowOnError($$$ERROR($$$GeneralError,"Error occurred while creating the file. Filename:"_tFileName_"| FileDirectory:"_tSendingAppAbsolutePath))
+			
+		}
+	}
+	CATCH tExc {
+		set tSC = tExc.AsStatus()
+	}
+		
+	quit tSC
+
+		//Set response status
+		//set pResponse.Status = tRetStatus
+]]></Implementation>
+</Method>
+
+<Method name="ConstructFilename">
+<Description>
+Helper method to construct filename SendingApp-MessageType-ControlId-Timestamp.hl7</Description>
+<FormalSpec>pMessage:EnsLib.HL7.Message</FormalSpec>
+<ReturnType>%String</ReturnType>
+<Implementation><![CDATA[
+	// Extract MSH fields
+	Set tSendingApp = pMessage.GetValueAt("MSH:3.1")
+	Set tMessageControlID = pMessage.GetValueAt("MSH:10")
+	Set tMessageType = pMessage.GetValueAt("MSH:9")
+	
+	// Generate timestamp
+	Set tTimeStamp = $ZDT($H, 8)
+	Set tTimeStamp = $TRANSLATE(tTimeStamp," :","") // YYYYMMDDHHMMSS
+	
+	Set tFilename = tSendingApp_"_"_tMessageType_"_"_tMessageControlID_"_"_tTimeStamp_".txt"
+	$$$SysLog(1,"ExternalADTAggregation","DV.ADT.Src.Operations.ADTProviderAccess.BadMessageHandler:ConstructFilename","Constructed fileName | "_tFilename)
+	
+	Quit tFilename
+]]></Implementation>
+</Method>
+</Class>
+
+
+<Class name="PIPELINE.Operation.PassthroughOperation">
+<Super>EnsLib.File.PassthroughOperation</Super>
+<TimeChanged>67383,86399.323012</TimeChanged>
+<TimeCreated>67383,84275.099389</TimeCreated>
+
+<XData name="MessageMap">
+<Data><![CDATA[
+<MapItems>
+  <MapItem MessageType="HS.Message.FHIR.Request">
+    <Method>FHIRRequest</Method>
+  </MapItem>
+</MapItems>
+]]></Data>
+</XData>
+
+<Method name="FHIRRequest">
+<FormalSpec>pRequest:HS.Message.FHIR.Request,pResponse:%Persistent</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+    set tStreamContainer = ##class(Ens.StreamContainer).%New()
+    set tStreamContainer.Stream = pRequest.Payload
+    do ..OnMessage(tStreamContainer)
+    set pResponse = ##class(HS.Message.FHIR.Response).%New()
+    set pResponse.Status=200
+    quit $$$OK
+]]></Implementation>
+</Method>
+</Class>
+
+
+<Class name="PIPELINE.Process.HL7ToCernerFHIR.Context">
+<Description>
+This class is generated by the PIPELINE.Process.HL7ToCernerFHIR BPL class.
+This class should not be edited or modified in any way.
+Do not make direct use of this class in your application.</Description>
+<ClassType>persistent</ClassType>
+<CompileAfter>PIPELINE.Process.HL7ToCernerFHIR</CompileAfter>
+<IncludeCode/>
+<ProcedureBlock>1</ProcedureBlock>
+<Super>Ens.BP.Context</Super>
+<TimeChanged>67412,68556.8442793</TimeChanged>
+<TimeCreated>67394,78714.0866462</TimeCreated>
+<GeneratedBy>Ens.BPL.Compiler.CLS</GeneratedBy>
+
+<Property name="bundle">
+<Type>HS.Message.XMLMessage</Type>
+</Property>
+
+<Property name="entry">
+<Type>%Library.ListOfObjects</Type>
+</Property>
+
+<Method name="%OnNew">
+<FormalSpec>initvalue</FormalSpec>
+<Language>objectscript</Language>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	If '$IsObject(..entryNewObject()) Quit %objlasterror
+	If '$IsObject(..bundleNewObject()) Quit %objlasterror
+	Quit ##super(initvalue)
+]]></Implementation>
+</Method>
+
+<Storage name="Default">
+<Type>%Storage.Persistent</Type>
+<DefaultData>ContextDefaultData1</DefaultData>
+<Data name="ContextDefaultData1">
+<Structure>listnode</Structure>
+<Subscript>"Context"</Subscript>
+<Value name="1">
+<Value>bundle</Value>
+</Value>
+<Value name="2">
+<Value>entry</Value>
+</Value>
+</Data>
+</Storage>
+</Class>
+
+
+<Class name="PIPELINE.Process.HL7ToCernerFHIR.Thread1">
+<Description>
+This class is generated by the PIPELINE.Process.HL7ToCernerFHIR BPL class.
+This class should not be edited or modified in any way.
+Do not make direct use of this class in your application.</Description>
+<ClassType>persistent</ClassType>
+<CompileAfter>PIPELINE.Process.HL7ToCernerFHIR</CompileAfter>
+<IncludeCode/>
+<ProcedureBlock>1</ProcedureBlock>
+<Super>Ens.BP.Thread</Super>
+<TimeChanged>67412,68557.1985969</TimeChanged>
+<TimeCreated>67412,68556.8396074</TimeCreated>
+<GeneratedBy>Ens.BPL.Compiler.CLS</GeneratedBy>
+
+<Method name="S1">
+<FormalSpec>process:Ens.BusinessProcess,context:Ens.BP.Context,synctimedout:%Boolean,syncresponses:%ArrayOfObjects(ELEMENTTYPE="%Library.Persistent"),request:%Library.Persistent,response:%Library.Persistent</FormalSpec>
+<Language>objectscript</Language>
+<PublicList>process,context</PublicList>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+ Set $ZT="Trap",status=$$$OK do {
+ Do {
+ set tSC=##class(PIPELINE.DTL.HL7.VR4.MessageHeader).Transform(request,.tEntry)
+ do context.entry.Insert(tEntry)
+ } while (0)
+ If $$$ISERR(status) Quit
+ Do {
+ set tSC=##class(PIPELINE.DTL.HL7.VR4.Patient).Transform(request,.tEntry)
+ do context.entry.Insert(tEntry)
+ } while (0)
+ If $$$ISERR(status) Quit
+ Do {
+ set tSC=##class(PIPELINE.DTL.HL7.VR4.Condition).Transform(request,.tEntry)
+ do context.entry.Insert(tEntry)
+ } while (0)
+ If $$$ISERR(status) Quit
+ Do {
+ set aux=context.entry
+ set tSC=##class(PIPELINE.DTL.HL7.VR4.Bundle).Transform(request,.tBundle,.aux)
+ set tStream=##class(%Stream.TmpCharacter).%New()
+ $$$LOGINFO(tBundle)
+ set tSC=tBundle.XMLExportToStream(.tStream)
+ do context.bundle.ContentStream.CopyFrom(tStream)
+ } while (0)
+ If $$$ISERR(status) Quit
+ #; --- Begin Call To Cerner ---
+ #; --- Begin Request ---
+ Set callrequest=##class(Ens.StreamContainer).%New()
+ If '$IsObject(callrequest) Set status=%objlasterror Quit
+ Set status=$$$OK,callrequest.Stream=context.bundle.ContentStream
+ If $$$ISERR(status) Quit
+ Set status=..MakeAsyncCall("","PIPELINE.File.ToCerner",callrequest,"To Cerner",0,0,"To Cerner",0)
+ If $$$ISERR(status) Quit
+ Kill callrequest
+ #; --- End Request ---
+ #; --- End Call To Cerner ---
+ Do process.ClearAllPendingResponses()
+ Set ..%NextState="Stop"
+ } while (0)
+Exit Quit ..ManageState(status)
+Trap Set $ZT="",status=..ManageStatus(status,"S1") Goto Exit
+]]></Implementation>
+</Method>
+
+<Storage name="Default">
+<Type>%Storage.Persistent</Type>
+</Storage>
+</Class>
+
+
+<Class name="PIPELINE.Process.HL7ToCernerFHIR">
+<Description>
+</Description>
+<Super>Ens.BusinessProcessBPL</Super>
+<TimeChanged>67412,68523.3336079</TimeChanged>
+<TimeCreated>67394,68050.413657</TimeCreated>
+
+<Storage name="Default">
+<Type>%Storage.Persistent</Type>
+</Storage>
+
+<XData name="BPL">
+<Description>
+BPL Definition</Description>
+<XMLNamespace>http://www.intersystems.com/bpl</XMLNamespace>
+<Data><![CDATA[
+<process language='objectscript' request='EnsLib.HL7.Message' response='HS.Message.XMLMessage' height='2000' width='2000' >
+<context>
+<property name='entry' type='%Library.ListOfObjects' instantiate='1' />
+<property name='bundle' type='HS.Message.XMLMessage' instantiate='1' />
+</context>
+<sequence xend='200' yend='750' >
+<code name='MessageHeader' xpos='200' ypos='250' >
+<![CDATA[ set tSC=##class(PIPELINE.DTL.HL7.VR4.MessageHeader).Transform(request,.tEntry)
+ do context.entry.Insert(tEntry)]]]]><![CDATA[>
+</code>
+<code name='PatientIdentifier' xpos='200' ypos='350' >
+<![CDATA[ set tSC=##class(PIPELINE.DTL.HL7.VR4.Patient).Transform(request,.tEntry)
+ do context.entry.Insert(tEntry)]]]]><![CDATA[>
+</code>
+<code name='Condition' xpos='200' ypos='450' >
+<![CDATA[ set tSC=##class(PIPELINE.DTL.HL7.VR4.Condition).Transform(request,.tEntry)
+ do context.entry.Insert(tEntry)]]]]><![CDATA[>
+</code>
+<code name='Build the Bundle' xpos='200' ypos='550' >
+<![CDATA[ set aux=context.entry
+ set tSC=##class(PIPELINE.DTL.HL7.VR4.Bundle).Transform(request,.tBundle,.aux)
+ set tStream=##class(%Stream.TmpCharacter).%New()
+ $$$LOGINFO(tBundle)
+ set tSC=tBundle.XMLExportToStream(.tStream)
+ do context.bundle.ContentStream.CopyFrom(tStream)]]]]><![CDATA[>
+</code>
+<call name='To Cerner' target='PIPELINE.File.ToCerner' async='1' xpos='200' ypos='650' >
+<request type='Ens.StreamContainer' >
+<assign property="callrequest.Stream" value="context.bundle.ContentStream" action="set" />
+</request>
+</call>
+</sequence>
+</process>
+]]></Data>
+</XData>
+</Class>
+
+
+<Class name="PIPELINE.Process.HL7ToFHIR.Context">
+<Description>
+This class is generated by the PIPELINE.Process.HL7ToFHIR BPL class.
+This class should not be edited or modified in any way.
+Do not make direct use of this class in your application.</Description>
+<ClassType>persistent</ClassType>
+<CompileAfter>PIPELINE.Process.HL7ToFHIR</CompileAfter>
+<IncludeCode/>
+<ProcedureBlock>1</ProcedureBlock>
+<Super>Ens.BP.Context</Super>
+<TimeChanged>67412,68556.9094525</TimeChanged>
+<TimeCreated>67386,38052.8723288</TimeCreated>
+<GeneratedBy>Ens.BPL.Compiler.CLS</GeneratedBy>
+
+<Property name="SDA3">
+<Type>HS.Message.XMLMessage</Type>
+</Property>
+
+<Method name="%OnNew">
+<FormalSpec>initvalue</FormalSpec>
+<Language>objectscript</Language>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	If '$IsObject(..SDA3NewObject()) Quit %objlasterror
+	Quit ##super(initvalue)
+]]></Implementation>
+</Method>
+
+<Method name="OnResponse1">
+<Description>
+Response Handler for call to PIPELINE.Process.HL7ToSDA3</Description>
+<FormalSpec>process:Ens.BusinessProcess,context:Ens.BP.Context,request:EnsLib.HL7.Message,response:Ens.Response,callrequest:EnsLib.HL7.Message,callresponse:HS.Message.XMLMessage,callname:%String</FormalSpec>
+<Language>objectscript</Language>
+<PublicList>process,context</PublicList>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+ Set $ZT="Trap",status=$$$OK do {
+ Set status=$$$OK,context.SDA3=callresponse
+ If $$$ISERR(status) Quit
+ } while (0)
+Exit Quit status
+Trap Set $ZT="",status=##class(Ens.Util.Error).EnsSystemError("PIPELINE.Process.HL7ToFHIR.Thread1","OnResponse1")
+ Goto Exit
+]]></Implementation>
+</Method>
+
+<Storage name="Default">
+<Type>%Storage.Persistent</Type>
+<DefaultData>ContextDefaultData1</DefaultData>
+<Data name="ContextDefaultData1">
+<Structure>listnode</Structure>
+<Subscript>"Context"</Subscript>
+<Value name="1">
+<Value>SDA3</Value>
+</Value>
+</Data>
+</Storage>
+</Class>
+
+
+<Class name="PIPELINE.Process.HL7ToFHIR.Thread1">
+<Description>
+This class is generated by the PIPELINE.Process.HL7ToFHIR BPL class.
+This class should not be edited or modified in any way.
+Do not make direct use of this class in your application.</Description>
+<ClassType>persistent</ClassType>
+<CompileAfter>PIPELINE.Process.HL7ToFHIR</CompileAfter>
+<IncludeCode/>
+<ProcedureBlock>1</ProcedureBlock>
+<Super>Ens.BP.Thread</Super>
+<TimeChanged>67412,68557.1973223</TimeChanged>
+<TimeCreated>67412,68556.9018572</TimeCreated>
+<GeneratedBy>Ens.BPL.Compiler.CLS</GeneratedBy>
+
+<Method name="S1">
+<FormalSpec>process:Ens.BusinessProcess,context:Ens.BP.Context,synctimedout:%Boolean,syncresponses:%ArrayOfObjects(ELEMENTTYPE="%Library.Persistent"),request:%Library.Persistent,response:%Library.Persistent</FormalSpec>
+<Language>objectscript</Language>
+<PublicList>process,context</PublicList>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+ Set $ZT="Trap",status=$$$OK do {
+ #; --- Begin Call Convert to SDA3 ---
+ #; --- Begin Request ---
+ Set callrequest=##class(EnsLib.HL7.Message).%New()
+ If '$IsObject(callrequest) Set status=%objlasterror Quit
+ Set status=$$$OK,callrequest=request
+ If $$$ISERR(status) Quit
+ Set status=..MakeAsyncCall("OnResponse1","PIPELINE.Process.HL7ToSDA3",callrequest,"Convert to SDA3",1,0,"Convert to SDA3",1)
+ If $$$ISERR(status) Quit
+ Kill callrequest
+ #; --- End Request ---
+ #; --- End Call Convert to SDA3 ---
+ Do ..%PendingResponses.Clear(),..%SyncResponses.Clear()
+ Set ..%SyncTimedOut=0,..%PendingTimeout="",..%PendingAlarmHandle="",..%SyncName=""
+ If ..%Process.IsResponsePending("Convert to SDA3") Do ..%PendingResponses.SetAt("","Convert to SDA3")
+ If ..%PendingResponses.Count()=0 {
+    Set ..%NextState="S3"
+ } else {
+    Set ..%NextState="S2",..%Wait=1
+ }
+ } while (0)
+Exit Quit ..ManageState(status)
+Trap Set $ZT="",status=..ManageStatus(status,"S1") Goto Exit
+]]></Implementation>
+</Method>
+
+<Method name="S2">
+<FormalSpec>process:Ens.BusinessProcess,context:Ens.BP.Context,synctimedout:%Boolean,syncresponses:%ArrayOfObjects(ELEMENTTYPE="%Library.Persistent"),request:%Library.Persistent,response:%Library.Persistent</FormalSpec>
+<Language>objectscript</Language>
+<PublicList>process,context</PublicList>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+ Set $ZT="Trap",status=$$$OK do {
+ If ..%PendingResponses.Count()=0 {
+    Set ..%NextState="S3"
+ } else {
+    Set ..%NextState="S2",..%Wait=1
+ }
+ } while (0)
+Exit Quit ..ManageState(status)
+Trap Set $ZT="",status=..ManageStatus(status,"S2") Goto Exit
+]]></Implementation>
+</Method>
+
+<Method name="S3">
+<FormalSpec>process:Ens.BusinessProcess,context:Ens.BP.Context,synctimedout:%Boolean,syncresponses:%ArrayOfObjects(ELEMENTTYPE="%Library.Persistent"),request:%Library.Persistent,response:%Library.Persistent</FormalSpec>
+<Language>objectscript</Language>
+<PublicList>process,context</PublicList>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+ Set $ZT="Trap",status=$$$OK do {
+ #; --- Begin Call SDA3 -> FHIR ---
+ #; --- Begin Request ---
+ Set callrequest=##class(HS.Message.XMLMessage).%New()
+ If '$IsObject(callrequest) Set status=%objlasterror Quit
+ Set status=$$$OK,callrequest=context.SDA3
+ If $$$ISERR(status) Quit
+ Set status=..MakeAsyncCall("","HS.FHIR.DTL.Util.HC.SDA3.FHIR.Process",callrequest,"SDA3 -> FHIR",1,0,"SDA3 -> FHIR",0)
+ If $$$ISERR(status) Quit
+ Kill callrequest
+ #; --- End Request ---
+ #; --- End Call SDA3 -> FHIR ---
+ Do process.ClearAllPendingResponses()
+ Set ..%NextState="Stop"
+ } while (0)
+Exit Quit ..ManageState(status)
+Trap Set $ZT="",status=..ManageStatus(status,"S3") Goto Exit
+]]></Implementation>
+</Method>
+
+<Storage name="Default">
+<Type>%Storage.Persistent</Type>
+</Storage>
+</Class>
+
+
+<Class name="PIPELINE.Process.HL7ToFHIR">
+<Description>
+</Description>
+<Super>Ens.BusinessProcessBPL</Super>
+<TimeChanged>67383,69763.71098</TimeChanged>
+<TimeCreated>67383,67407.249591</TimeCreated>
+
+<Storage name="Default">
+<Type>%Storage.Persistent</Type>
+</Storage>
+
+<XData name="BPL">
+<Description>
+BPL Definition</Description>
+<XMLNamespace>http://www.intersystems.com/bpl</XMLNamespace>
+<Data><![CDATA[
+<process language='objectscript' request='EnsLib.HL7.Message' response='Ens.Response' height='2000' width='2000' >
+<context>
+<property name='SDA3' type='HS.Message.XMLMessage' instantiate='1' />
+</context>
+<sequence xend='200' yend='550' >
+<call name='Convert to SDA3' target='PIPELINE.Process.HL7ToSDA3' async='0' xpos='200' ypos='250' >
+<request type='EnsLib.HL7.Message' >
+<assign property="callrequest" value="request" action="set" />
+</request>
+<response type='HS.Message.XMLMessage' >
+<assign property="context.SDA3" value="callresponse" action="set" />
+</response>
+</call>
+<call name='SDA3 -&gt; FHIR' target='HS.FHIR.DTL.Util.HC.SDA3.FHIR.Process' async='1' xpos='200' ypos='350' >
+<request type='HS.Message.XMLMessage' >
+<assign property="callrequest" value="context.SDA3" action="set" />
+</request>
+<response type='Ens.Response' />
+</call>
+<assign name="Always Return 1" property="response" value="1" action="set" xpos='200' ypos='450' disabled="true"/>
+</sequence>
+</process>
+]]></Data>
+</XData>
+</Class>
+
+
+<Class name="PIPELINE.Process.HL7ToSDA3.Context">
+<Description>
+This class is generated by the PIPELINE.Process.HL7ToSDA3 BPL class.
+This class should not be edited or modified in any way.
+Do not make direct use of this class in your application.</Description>
+<ClassType>persistent</ClassType>
+<CompileAfter>PIPELINE.Process.HL7ToSDA3</CompileAfter>
+<IncludeCode/>
+<ProcedureBlock>1</ProcedureBlock>
+<Super>Ens.BP.Context</Super>
+<TimeChanged>67412,68556.8699998</TimeChanged>
+<TimeCreated>67386,38052.9645418</TimeCreated>
+<GeneratedBy>Ens.BPL.Compiler.CLS</GeneratedBy>
+
+<Property name="SDA3Message">
+<Type>HS.Message.XMLMessage</Type>
+</Property>
+
+<Method name="%OnNew">
+<FormalSpec>initvalue</FormalSpec>
+<Language>objectscript</Language>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	If '$IsObject(..SDA3MessageNewObject()) Quit %objlasterror
+	Quit ##super(initvalue)
+]]></Implementation>
+</Method>
+
+<Storage name="Default">
+<Type>%Storage.Persistent</Type>
+<DefaultData>ContextDefaultData1</DefaultData>
+<Data name="ContextDefaultData1">
+<Structure>listnode</Structure>
+<Subscript>"Context"</Subscript>
+<Value name="1">
+<Value>SDA3Message</Value>
+</Value>
+</Data>
+</Storage>
+</Class>
+
+
+<Class name="PIPELINE.Process.HL7ToSDA3.Thread1">
+<Description>
+This class is generated by the PIPELINE.Process.HL7ToSDA3 BPL class.
+This class should not be edited or modified in any way.
+Do not make direct use of this class in your application.</Description>
+<ClassType>persistent</ClassType>
+<CompileAfter>PIPELINE.Process.HL7ToSDA3</CompileAfter>
+<IncludeCode/>
+<ProcedureBlock>1</ProcedureBlock>
+<Super>Ens.BP.Thread</Super>
+<TimeChanged>67412,68557.1989565</TimeChanged>
+<TimeCreated>67412,68556.858711</TimeCreated>
+<GeneratedBy>Ens.BPL.Compiler.CLS</GeneratedBy>
+
+<Method name="S1">
+<FormalSpec>process:Ens.BusinessProcess,context:Ens.BP.Context,synctimedout:%Boolean,syncresponses:%ArrayOfObjects(ELEMENTTYPE="%Library.Persistent"),request:%Library.Persistent,response:%Library.Persistent</FormalSpec>
+<Language>objectscript</Language>
+<PublicList>process,context</PublicList>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+ Set $ZT="Trap",status=$$$OK do {
+ Do {
+ set tStream=##class(%Stream.GlobalCharacter).%New()
+ set tSC=##class(PIPELINE.HL7.HL7ToSDA3).GetSDA(request,.tStream)
+ set context.SDA3Message.ContentStream=tStream
+ $$$LOGINFO(tStream.Read())
+ 
+ } while (0)
+ If $$$ISERR(status) Quit
+ Set status=$$$OK,response=context.SDA3Message
+ If $$$ISERR(status) Quit
+ Do process.ClearAllPendingResponses()
+ Set ..%NextState="Stop"
+ } while (0)
+Exit Quit ..ManageState(status)
+Trap Set $ZT="",status=..ManageStatus(status,"S1") Goto Exit
+]]></Implementation>
+</Method>
+
+<Storage name="Default">
+<Type>%Storage.Persistent</Type>
+</Storage>
+</Class>
+
+
+<Class name="PIPELINE.Process.HL7ToSDA3">
+<Description>
+</Description>
+<Super>Ens.BusinessProcessBPL</Super>
+<TimeChanged>67386,62785.276427</TimeChanged>
+<TimeCreated>67383,67065.065779</TimeCreated>
+
+<Storage name="Default">
+<Type>%Storage.Persistent</Type>
+</Storage>
+
+<XData name="BPL">
+<Description>
+BPL Definition</Description>
+<XMLNamespace>http://www.intersystems.com/bpl</XMLNamespace>
+<Data><![CDATA[
+<process language='objectscript' request='EnsLib.HL7.Message' response='HS.Message.XMLMessage' height='2000' width='2000' >
+<context>
+<property name='SDA3Message' type='HS.Message.XMLMessage' instantiate='1' />
+</context>
+<sequence xend='200' yend='450' >
+<code name='HL7-&gt;SDA3' xpos='200' ypos='250' >
+<![CDATA[ set tStream=##class(%Stream.GlobalCharacter).%New()
+ set tSC=##class(PIPELINE.HL7.HL7ToSDA3).GetSDA(request,.tStream)
+ set context.SDA3Message.ContentStream=tStream
+ $$$LOGINFO(tStream.Read())
+ ]]]]><![CDATA[>
+</code>
+<assign name="Set the Response" property="response" value="context.SDA3Message" action="set" xpos='200' ypos='350' />
+</sequence>
+</process>
+]]></Data>
+</XData>
+</Class>
+
+
+<Class name="PIPELINE.UTIL.DEPLOYMENT">
+<Super>HS.Gateway.HL7.HL7ToSDA3</Super>
+<TimeChanged>67410,45337.5403867</TimeChanged>
+<TimeCreated>67386,62420.324592</TimeCreated>
+</Class>
+
+
+<Class name="PIPELINE.UTIL.FHIRExport">
+<Super>%XML.Adaptor</Super>
+<TimeChanged>67413,31641.7097932</TimeChanged>
+<TimeCreated>67412,43046.7562699</TimeCreated>
+
+<Method name="StripNamespacesV8">
+<ClassMethod>1</ClassMethod>
+<FormalSpec><![CDATA[inputStream:%Stream.Object,&cleanedStream:%Stream.Object]]></FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+    Set tSC = $$$OK
+    Try {
+
+        
+    } Catch ex {
+        Set tSC = ex.AsStatus()
+    }
+    Return tSC
+]]></Implementation>
+</Method>
+
+<Method name="StripNamespacesV2">
+<ClassMethod>1</ClassMethod>
+<FormalSpec>inputStream:%Stream.Object</FormalSpec>
+<ReturnType>%Stream.TmpCharacter</ReturnType>
+<Implementation><![CDATA[
+    Set outputStream = ##class(%Stream.TmpCharacter).%New()
+    Set reader = ##class(%XML.Reader).%New()
+    Set writer = ##class(%XML.Writer).%New()
+
+    // Configure writer to write without namespace declarations
+    Set writer.Indent = 1
+    Set writer.OmitNamespace = 1
+    Set writer.Output = outputStream
+
+    // Load input
+    Do reader.OpenStream(inputStream)
+
+    // Remove all xmlns/xsi/prefixed attributes while writing
+    While reader.Read() {
+        If reader.NodeType = "element" {
+            Set reader.NamespaceURI = ""
+            Set reader.Prefix = ""
+        }
+        Do writer.CopyNode(reader)
+    }
+
+    Do writer.Flush()
+    Do outputStream.Rewind()
+    Return outputStream
+]]></Implementation>
+</Method>
+
+<Method name="StripXSI">
+<Description>
+Clean FHIR Bundle XML</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>node:%XML.Node</FormalSpec>
+<Implementation><![CDATA[
+    If node.IsElement {
+        // Remove all xsi:* attributes
+        Set i = node.GetAttributeCount()
+        While i > 0 {
+            Set attrName = node.GetAttributeName(i)
+            If $Extract(attrName,1,4)="xsi:" {
+                Do node.RemoveAttribute(attrName)
+            }
+            Set i = i - 1
+        }
+
+        // Remove xmlns:xsi namespace declaration
+        If node.HasAttribute("xmlns:xsi") {
+            Do node.RemoveAttribute("xmlns:xsi")
+        }
+
+        // Recurse into children
+        Set child = node.FirstChild()
+        While child '= "" {
+            Do ..StripXSI(child)
+            Set child = child.NextSibling()
+        }
+    }
+]]></Implementation>
+</Method>
+
+<Method name="StripNamespaces">
+<ClassMethod>1</ClassMethod>
+<FormalSpec>node:%XML.Node</FormalSpec>
+<Implementation><![CDATA[
+    If node.IsElement {
+	    
+        // Step 1: Remove namespace declarations (xmlns, xmlns:*)
+        Set i = node.GetAttributeCount()
+        While i > 0 {
+            Set attrName = node.GetAttributeName(i)
+            If $Extract(attrName,1,6)="xmlns:" || attrName="xmlns" {
+                Do node.RemoveAttribute(attrName)
+            }
+            Set i = i - 1
+        }
+
+        // Step 2: Remove namespace declarations (xmlns, xmlns:*)
+        Set i = node.GetAttributeCount()
+        While i > 0 {
+            Set attrName = node.GetAttributeName(i)
+            If $Extract(attrName,1,6)="d5p1:" || attrName="d5p1" {
+                Do node.RemoveAttribute(attrName)
+            }
+            Set i = i - 1
+        }
+
+        // Step 2: Remove all attributes with a prefix (e.g. xsi:type, fhir:value, d5p1:type)
+        Set i = node.GetAttributeCount()
+        While i > 0 {
+            Set attrName = node.GetAttributeName(i)
+            If $Find(attrName, ":") {
+                Do node.RemoveAttribute(attrName)
+            }
+            Set i = i - 1
+        }
+
+        // Step 3: Recurse into child nodes
+        Set child = node.FirstChild()
+        While child '= "" {
+            Do ..StripNamespaces(child)
+            Set child = child.NextSibling()
+        }
+    }
+]]></Implementation>
+</Method>
+
+<Method name="ExportCleanFHIRXML">
+<Description>
+Transform HL7 message using a specified DTL class, and export clean FHIR XML</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>hl7msg:EnsLib.HL7.Message,dtlClass:%String,targetClass:%String,outputPath:%String</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+    Try {
+        // Dynamically create target FHIR object (e.g. Patient, Bundle)
+        Set fhirObj = $ClassMethod(targetClass, "%New")
+
+        // Run the DTL transformation
+        Do $ClassMethod(dtlClass, "Transform", hl7msg, .fhirObj)
+
+        // Configure Clean XML Writer 
+        Set writer = ##class(%XML.Writer).%New()
+        Set writer.NoXSIType = 1  			// Suppress xsi:type
+        Set writer.OmitNamespace = 1    	// Suppress FHIR namespace:  xmlns="http://hl7.org/fhir"
+        Set writer.Indent = 1
+		Set writer.NamespacePrefix = "" 	// Supress xsi prefix generation
+		Set writer.SuppressPrefixes = 1 	// Supress xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"       
+        Set writer.OutputNull = 0			// Supress XML tags with No Values
+        Set writer.OutputCharset = "UTF-8"
+
+
+        // Output To File
+        Do writer.OutputToFile(outputPath)
+        Do writer.WriteObject(fhirObj)
+
+        Return $$$OK
+
+    } Catch ex {
+        Write "❌ ERROR: "_ex.DisplayString(), !
+        Return ex.AsStatus()
+    }
+]]></Implementation>
+</Method>
+
+<Method name="ExportHL7ToFormattedFHIR">
+<Description>
+Transform HL7 message using a specified DTL class, and export clean FHIR XML</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>hl7msg:EnsLib.HL7.Message,filePath:%String</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+    Try {
+        // Create an instance of the FHIR MessageHeader target
+        Set msgHeader = ##class(HS.FHIR.DTL.vR4.Model.Resource.MessageHeader).%New()
+
+        // Run the DTL transformation
+        Do ##class(DTL.HL7.To.FHIR.MessageHeader).Transform(hl7msg, .msgHeader)
+
+        // Configure XML Writer
+        Set writer = ##class(%XML.Writer).%New()
+        Set writer.NoXSIType = 1  			// Suppress xsi:type
+        Set writer.OmitNamespace = 1    	// Suppress FHIR namespace:  xmlns="http://hl7.org/fhir"
+        Set writer.Indent = 1
+		Set writer.NamespacePrefix = "" 	// Supress xsi prefix generation
+		Set writer.SuppressPrefixes = 1 	// Supress xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"       
+        Set writer.OutputNull = 0			// Supress XML tags with No Values
+        Set writer.OutputCharset = "UTF-8"
+
+        // Output to file
+        Do writer.OutputToFile(filePath)
+        Do writer.WriteObject(msgHeader)
+
+        RETURN $$$OK
+    }
+    Catch ex {
+        Write "Error: "_ex.DisplayString(), !
+        RETURN ex.AsStatus()
+    }
+]]></Implementation>
+</Method>
+
+<Storage name="Default">
+<Type>%Storage.Persistent</Type>
+<DataLocation>^PIPELINE.UTIL.FHIRExportD</DataLocation>
+<DefaultData>FHIRExportDefaultData</DefaultData>
+<IdLocation>^PIPELINE.UTIL.FHIRExportD</IdLocation>
+<IndexLocation>^PIPELINE.UTIL.FHIRExportI</IndexLocation>
+<StreamLocation>^PIPELINE.UTIL.FHIRExportS</StreamLocation>
+<Data name="FHIRExportDefaultData">
+<Value name="1">
+<Value>%%CLASSNAME</Value>
+</Value>
+</Data>
+</Storage>
+</Class>
+
+
+<Class name="PIPELINE.UTIL.WEBAPPDEPLOY">
+<Super>HS.Gateway.HL7.HL7ToSDA3</Super>
+<TimeChanged>67411,22372.0337706</TimeChanged>
+<TimeCreated>67386,62420.324592</TimeCreated>
+
+<Method name="CreateWebApp">
+<ClassMethod>1</ClassMethod>
+<Implementation><![CDATA[
+	//pNameSpace As %String, pDescription As %String
+    
+    SET app = "/csp/healthshare/dvareconedge/services"
+
+    SET props = {
+        "Description": "HealthShare Edge Gateway Services",
+        "NameSpace": "MYNAMESPACE",
+        "IsNamespaceDefault": 0,
+        "IsAutoStart": 1,
+        "DispatchClass": "MyApp.Dispatch",
+        "CSPZENEnabled": 1,
+        "EnableStandardApps": 0,
+        "Enabled": 1,
+        "LoginRedirect": "",
+        "Unauthenticated": 0,
+        "AutheEnabled": 64, // Password authentication
+        "Roles": "",
+        "Resource": "%DB_MYRESOURCE",  // Ensure this exists
+        "GroupById": 0
+    }
+
+    // Create web app
+    SET status = ##class(Security.Applications).Create(app, .props)
+
+    IF $$$ISOK(status) {
+        WRITE "Web application '", app, "' created successfully", !
+    } ELSE {
+        DO $System.Status.DisplayError(status)
+    }
+]]></Implementation>
+</Method>
+</Class>
+
+
+</Export>
